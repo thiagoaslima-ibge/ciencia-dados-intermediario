@@ -1,0 +1,131 @@
+/* Estatística */
+$azulLight1: #74bdff;
+$azulLight2: #008eff;
+$azulMedium: #006dff;
+$azulDark6: #003adf;
+$azulDark9: #0022b9;
+
+/* Geociências */
+$verdeLight1: #87dc00;
+$verdeLight2: #46a500;
+$verdeMedium: #138500;
+$verdeDark6: #004d00;
+$verdeDark9: #002f00;
+
+/* Gestão e governança */
+$pessegoLight1: #ff9da3;
+$pessegoLight2: #fc7d84;
+$pessegoMedium: #d15761;
+$pessegoDark6: #7f0023;
+$pessegoDark9: #5a0004;
+
+/* Tecnologia */
+$violetaLight1: #dcb2ff;
+$violetaLight2: #ae88f5;
+$violetaMedium: #8764cd;
+$violetaDark6: #472b8b;
+$violetaDark9: #240d6a;
+
+/* Comunicação */
+$laranjaLight1: #ff8b00;
+$laranjaLight2: #ff7200;
+$laranjaMedium: #f14600;
+$laranjaDark6: #900000;
+$laranjaDark9: #680001;
+
+/* Ensino */
+$turquesaLight1: #63d7e2;
+$turquesaLight2: #16a0ab;
+$turquesaMedium: #00808b;
+$turquesaDark6: #004a55;
+$turquesaDark9: #002c37;
+
+/* Institucional */
+$institucionalLight1: #92c8ff;
+$institucionalLight2: #629df4;
+$institucionalLight3: #3579cc;
+$institucionalMedium: #004282;
+$institucionalDark9: #002569;
+
+$institucionalOficial: $institucionalMedium;
+
+/* CORES */
+:root, 
+.curso-estatistica {
+  --color-light-1: #{$azulLight1};
+  --color-light-2: #{$azulLight2};
+  --color-medium: #{$azulMedium};
+  --color-dark-6: #{$azulDark6};
+  --color-dark-9: #{$azulDark9};
+}
+
+.curso-geociencias {
+  --color-light-1: #{$verdeLight1};
+  --color-light-2: #{$verdeLight2};
+  --color-medium: #{$verdeMedium};
+  --color-dark-6: #{$verdeDark6};
+  --color-dark-9: #{$verdeDark9};
+}
+
+.curso-gestao-governanca {
+  --color-light-1: #{$pessegoLight1};
+  --color-light-2: #{$pessegoLight2};
+  --color-medium: #{$pessegoMedium};
+  --color-dark-6: #{$pessegoDark6};
+  --color-dark-9: #{$pessegoDark9};
+}
+
+.curso-tecnologia {
+  --color-light-1: #{$violetaLight1};
+  --color-light-2: #{$violetaLight2};
+  --color-medium: #{$violetaMedium};
+  --color-dark-6: #{$violetaDark6};
+  --color-dark-9: #{$violetaDark9};
+}
+
+.curso-comunicacao {
+  --color-light-1: #{$laranjaLight1};
+  --color-light-2: #{$laranjaLight2};
+  --color-medium: #{$laranjaMedium};
+  --color-dark-6: #{$laranjaDark6};
+  --color-dark-9: #{$laranjaDark9};
+}
+
+.curso-ensino {
+  --color-light-1: #{$turquesaLight1};
+  --color-light-2: #{$turquesaLight2};
+  --color-medium: #{$turquesaMedium};
+  --color-dark-6: #{$turquesaDark6};
+  --color-dark-9: #{$turquesaDark9};
+}
+
+.curso-institucional {
+  --color-light-1: #{$institucionalLight1};
+  --color-light-2: #{$institucionalLight2};
+  --color-medium: #{$institucionalMedium};
+  --color-dark-9: #{$institucionalDark9};
+}
+
+$colorLight1: var(--color-light-1);
+$colorLight2: var(--color-light-2);
+$colorMedium: var(--color-medium);
+$colorDark6: var(--color-dark-6);
+$colorDark9: var(--color-dark-9);
+
+$greyLight0: #e2e2e2;
+$greyLight1: #c5c5c5;
+$greyLight2: #9a9a9a;
+$greyMedium: #767676;
+$greyDark6: #3d3d3d;
+$greyDark9: #212121;
+$backgroundColor: #eeeeee;
+
+/* FONTES */
+$baseFont: 'Roboto', sans-serif;
+
+/* MEDIA QUERY BREAK POINTS */
+$breakPointSm: 50em;
+$breakPointMd: 64em;
+$breakPointLg: 92em;
+
+/* SCALE MULTIPLIERS (1.26x): .5 / .63 / .794 / 1 / 1.26 / 1.588 / 2 / 2.52 / 3.176 / 4 / 5.042 / 6.353 */

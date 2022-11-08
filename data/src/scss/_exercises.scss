@@ -1,0 +1,126 @@
+.exercise {
+  &__action-group {
+    position: relative;
+    min-height: 3.176rem;
+    padding-left: 0;
+  }
+  &__btn-check-answer, &__feedback {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: .25rem;
+    font-size: 1.26rem;
+    opacity: 0;
+  }
+  &__feedback {
+    position: relative;
+    display: none;
+    padding: 1rem;
+    background-color: #fff;	
+  }
+  &__feedback--right {
+    color: #060;
+    border-top: solid 5px #060;
+  }
+  &__feedback--wrong {
+    color: #900;
+    border-top: solid 5px #900;
+  }
+}
+.multiple-choice {
+  &__label {
+    position: relative;
+    padding-left: 1rem;
+    text-indent: -1rem;
+  }    
+  &__input--img[type="radio"] {
+    position: absolute;	
+    top: .5rem;
+    left: .5rem;
+    height: 1rem;
+    width: 1rem;
+    cursor:pointer;
+  }
+}
+.true-or-false {
+  &__btn-answer {
+    padding: .5rem .7rem;
+    border: solid 5px $greyLight2;
+    background-color: $greyLight2;
+  }
+  &__btn-answer:hover { 
+    border:solid 5px $greyDark6;
+    background-color: $greyDark6; 
+  }
+  &__btn-answer--checked {
+    color: #000;
+    background-color: $colorLight1;
+    border: solid 5px  $colorLight1;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+  &__exercise-feedback { margin-top: 1rem; }
+  .exercise__icon { margin-top: .63rem; }
+}
+.relate-cols {
+  &__form {
+    margin: 0;
+    list-style-type: none;
+  }
+  &__item {
+    position:relative;
+    margin-bottom: 0.5rem;
+  }
+  &__label {
+    display:block;
+    margin-left: 2rem;
+  }
+  &__input {
+    position: absolute;
+    width: 1.5rem;
+    text-align: center;
+  }
+  &__exercise-feedback { margin: 1em 0 0 2em; }
+}
+.crosswords {
+  margin-bottom: 2em;
+  td {
+    position: relative;
+    padding: 0;
+    border-bottom: none;
+    border: solid 1px $greyLight2;
+    vertical-align: auto;
+  }
+  tbody tr:nth-child(odd),
+  tbody tr:nth-child(even) { background-color:transparent; }
+  input {
+    height: 2rem;
+    min-width:2rem;
+    width:100%;
+    text-align: center;
+    text-transform: uppercase;
+    border: solid 2px $greyMedium;
+    transition: all 1s;
+  }
+  input[disabled="disabled"] { background-color: $greyMedium; }
+  td[data-wordindex]::after {
+    content:attr(data-wordindex);
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0.198rem;
+    font-size:0.7rem;
+  }
+  .rightOption {
+    border:solid 2px green;
+    color:green;
+  }
+  .wrongOption {
+    border:solid 2px red;
+    color:red;
+  }
+}

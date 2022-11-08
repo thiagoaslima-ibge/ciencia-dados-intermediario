@@ -1,0 +1,58 @@
+<t:Tasks xmlns:t="http://schemas.microsoft.com/office/tasks/2019/documenttasks" xmlns:oel="http://schemas.microsoft.com/office/2019/extlst">
+  <t:Task id="{131E0422-B2A4-48FF-8416-09DE45B8DC62}">
+    <t:Anchor>
+      <t:Comment id="647992539" />
+    </t:Anchor>
+    <t:History>
+      <t:Event id="{B3A7295C-88D6-4B38-9062-B4E45BEA14B2}" time="2022-09-16T17:13:17.205Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1760249350" />
+        </t:Anchor>
+        <t:Create />
+      </t:Event>
+      <t:Event id="{ED507D74-4513-4EFC-ACBA-6F9458E6DD92}" time="2022-09-16T17:13:17.205Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1760249350" />
+        </t:Anchor>
+        <t:Assign userId="S::thiago.lima@ibge.gov.br::c9fae149-f2e4-45db-b538-e31e350e61f1" userProvider="AD" userName="Thiago Augusto Silva de Lima" />
+      </t:Event>
+      <t:Event id="{D832CCAE-D6E1-46CF-8B93-66C561709FD6}" time="2022-09-16T17:13:17.205Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1760249350" />
+        </t:Anchor>
+        <t:SetTitle title="@Thiago Augusto Silva de Lima" />
+      </t:Event>
+    </t:History>
+  </t:Task>
+  <t:Task id="{845DFFF4-8263-4C46-990B-476FB4C5A335}">
+    <t:Anchor>
+      <t:Comment id="1423825610" />
+    </t:Anchor>
+    <t:History>
+      <t:Event id="{719CC569-4A02-4310-8FA2-C019A2651754}" time="2022-09-16T17:21:26.357Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1606375522" />
+        </t:Anchor>
+        <t:Create />
+      </t:Event>
+      <t:Event id="{680396BB-2DB2-4375-839B-C5C8B3355A40}" time="2022-09-16T17:21:26.357Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1606375522" />
+        </t:Anchor>
+        <t:Assign userId="S::thiago.lima@ibge.gov.br::c9fae149-f2e4-45db-b538-e31e350e61f1" userProvider="AD" userName="Thiago Augusto Silva de Lima" />
+      </t:Event>
+      <t:Event id="{29CD8FFC-3660-4F71-89E4-16A2E1F696B7}" time="2022-09-16T17:21:26.357Z">
+        <t:Attribution userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" userProvider="AD" userName="Aline Bezerra da Silva" />
+        <t:Anchor>
+          <t:Comment id="1606375522" />
+        </t:Anchor>
+        <t:SetTitle title="@Thiago Augusto Silva de Lima" />
+      </t:Event>
+    </t:History>
+  </t:Task>
+</t:Tasks>

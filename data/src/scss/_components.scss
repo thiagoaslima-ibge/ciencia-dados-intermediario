@@ -1,0 +1,506 @@
+/* MODAL
+   Inclui propriedades para implementacao da janela modal. */
+.modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 13;
+	display: none;	
+  height: 100%;
+  margin-left: auto;
+	margin-right: auto;
+	max-width: 68rem;
+	padding: 2rem;	
+	background-color: #fff;
+	&__header {
+		overflow: hidden;
+		padding-bottom: 2rem;
+	}
+	&__content {
+		height: 90%;
+		overflow-y: auto;
+	}
+	&__btn-close {
+		float:right;
+		padding:.5rem;
+		font-size:.63rem;
+	}
+	&__heading-1 {
+    float:left;
+    margin:0;		
+	}
+	&__iframe {
+    height:100%;
+    width:100%;		
+	}
+}	
+#modal_retry, #modal_incomplete {	
+	top: 25%;
+	bottom: auto;
+	height: auto;
+	max-width: 38rem;
+	font-size: 0.8rem;
+}
+
+/* TOOLTIP
+   Inclui propriedades para implementacao de tooltip. */
+.ttorigin {
+  padding:0 0.25em;
+  color:#000;
+  cursor:help;
+  &::before {
+    position:relative;
+    top:.3rem;
+    left:0;
+    vertical-align:bottom;
+    content:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="%23767676"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    animation:moveArrowLeft 1s linear infinite alternate;
+  }
+  &::after {
+    position:relative;
+    top:.3rem;
+    right:0;    
+    content:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="%23767676"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    animation:moveArrowRight 1s linear infinite alternate;
+  }
+}
+  
+@keyframes moveArrowLeft {
+  0% { left:0; }
+  50% { left:-5px; }
+  100% { left:0; }
+}
+@keyframes moveArrowRight {
+  0% { right:0; }
+  50% { right:-5px; }
+  100% { right:0; }
+}
+
+.tooltipster {
+  &-sidetip {
+    .tooltipster-content {
+      color:#000;
+      font-size:0.63rem;
+      font-weight:400;
+      line-height:1.26;
+    }
+    .tooltipster-box {            
+      padding: 0.5em;
+      font-weight: 300;
+      background: $colorLight1;
+      border: none;
+      border-radius: 5px;
+    }
+    &.tooltipster-bottom .tooltipster-arrow-border { border-bottom-color: transparent; }
+    &.tooltipster-left .tooltipster-arrow-border { border-left-color: transparent; }
+    &.tooltipster-right .tooltipster-arrow-border { border-right-color: transparent; }
+    &.tooltipster-top .tooltipster-arrow-border { border-top-color: transparent; }
+    &.tooltipster-bottom .tooltipster-arrow-background { border-bottom-color: $colorLight1; }
+    &.tooltipster-left .tooltipster-arrow-background { border-left-color: $colorLight1; }
+    &.tooltipster-right .tooltipster-arrow-background { border-right-color: $colorLight1; }
+    &.tooltipster-top .tooltipster-arrow-background { border-top-color: $colorLight1; }
+  }
+}
+.tooltip_templates { display:none; }
+
+/* ACORDEON
+   Inclui propriedades para implementacao do acordeon. */
+.accordion {
+    margin: 0 0 2rem 0;
+    &__trigger {
+      display: block;
+      margin: 0 0 .63rem 0;
+      padding: 1rem;
+      width: 100%;
+      text-align: left;
+      text-decoration: none;		
+      background: transparent;
+      border: solid 1px $greyMedium;
+      border-radius: 5px;      
+      transition: all 1s;
+    }
+    &__trigger--active { background-color: #fff; }
+    &__trigger svg {
+      float: right;
+      transition: all .5s;
+    }
+	&__panel {
+		overflow: hidden;
+		padding: 0 1rem 1rem 1rem;
+	}
+}	
+
+/* LINHA DO TEMPO
+   Inclui propriedades para implementacao da linha do tempo. */
+.timeline {
+  &__caption {
+    margin-bottom: 2.414rem;
+    text-align: center;
+  }
+  &__container {
+    position: relative;	
+    margin: 0 0 3em 0;
+    padding: 0;
+    color: #000;
+    list-style-type: none;	
+  }
+  &__baseline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;    
+    margin-left: -2px;
+    width: 4px;
+    background-color: $greyLight2;
+    visibility:hidden; 
+  }
+  &__entry {
+    position: relative;
+    margin-bottom: 3em;	
+  }
+  &__year {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 2.52rem;
+    margin-left: -1.26rem !important;
+    padding-top: .63rem;        
+    width: 2.52rem;
+    color: #000;    
+    font-size: 0.794rem;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: center;
+    background-color: $greyLight2;
+    border-radius: 100px;
+  }
+  &__content-box {
+    position: relative;
+    padding: 0 3em;
+    line-height: 1.588;
+    &:nth-child(2) { margin-top:3rem; }
+    p { font-size: 0.8em; }
+  }
+}
+
+/* MOSAICO DE FOTOS
+   Inclui propriedades para implementacao do mosaico de fotos. */
+.photo-mosaic {    
+  margin: 1rem 0 2rem 0;
+  padding: 0;
+  > li {
+    margin: 0;
+    padding: 0;
+  }
+  &__img-container {
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  &__img-caption {        
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    overflow: auto;
+    padding: 2rem;
+    width: 100%;
+    color: #fff;
+    font-size: .794rem;
+    text-align: left;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    @include prefix(transition, opacity .3s ease-in-out, webkit moz ms o);      
+  }
+  &__img-caption {
+    a { color: #fff; }
+    &:hover { opacity: 1; }        
+  }
+}
+
+/* DESTAQUES
+   Inclui propriedades para implementacao dos destaques. */
+.splash-page {
+  background-color: $colorMedium;
+  &__content,
+  p,
+  h1,
+  h2,
+  a,
+  .navigation__pagination { color: #fff; }
+  .navigation__icon-back, .navigation__icon-forward { fill: #fff; }
+  &__content {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  &__icon {
+    font-size: 4em;
+    vertical-align: top;
+  }    
+	a { border-color: #fff; }
+	.bulleted-list > li::before {	color: #fff; }
+	.definition-list dt {    
+    color:#fff;
+    border-left: solid 2px #fff;
+  }
+	.btn_menu {
+		color:#000;
+		background-color: #fff;		
+	}
+  .btn_menu:hover {
+    color:#fff;
+    background-color:$greyDark6;
+  }	
+  .progress-bar {
+    &__indicator { color: #fff; }
+    &__line-divider { background-color: #fff; }
+    &__percentage {	
+      color: #000;
+      background-color: #fff;
+    }
+  }
+}	
+.feature {
+	margin: 1rem 0 2rem;
+	padding: 4rem 0 3rem 0;
+	font-size: 1rem;	
+	font-weight: 700;
+	line-height: 1.588;
+	background-color: $colorMedium;
+  @include prefix(background-size, cover, webkit ms o moz);
+  background-position: center center;
+  * { color:#fff; }
+  .feature &__title {
+    margin-top: 0;
+    font-weight: 900;
+  }  
+}
+
+/* TABELAS e QUADROS
+   Inclui propriedades para implementacao de tabelas (.table) e quadros (.table--text-table). */
+.table {	
+  display: table;
+  width: 100%;
+	font-size: .794rem;
+  line-height: 1.588;  
+  border-collapse: collapse;
+  table-layout: fixed;
+	tr:hover {
+    th,
+    td {
+			background-color: $colorLight1;
+			border-bottom-color: $colorMedium;
+		}
+	}
+	th {		
+		padding: 1rem;
+    color: #000;
+    font-weight: 500;
+		text-align: left;
+		vertical-align: top;		
+	}
+	th[scope="col"] { border-bottom: solid 4px $greyMedium; } 
+	th[scope="row"] { border-bottom: solid 2px $greyLight1; }
+	th small {
+		display: block;
+		font-size: .63rem;
+	}
+	td {
+		padding: 1rem;
+		border-bottom: solid 2px $greyLight1;	
+		vertical-align: top;
+	}
+	tbody tr:nth-child(even) { background-color: $greyLight1; }
+	&__title {
+		color: #000;        
+    font-size: .794rem;
+    font-weight: 500;        
+    text-align: left;
+	}	
+	tr &__numeric-col-heading { text-align: right; }
+	&__numeric-values {
+    @include prefix(font-feature-settings, "onum" 1, webkit moz ms);
+		text-align:right;
+	}
+	&--text-table th[scope="row"] { border-bottom: solid 2px #ccc; }
+	&--text-table td { border-bottom: solid 2px #ccc; }
+	&--text-table tbody tr:nth-child(even) { background-color: transparent; }
+	&-container {
+		margin: 0 0 2rem 0;
+		overflow-x: auto;
+	}
+}
+
+/* LISTAS
+   Inclui propriedades para implementacao de listas. */
+.bulleted-list {	
+	padding: 0;
+  margin: -.5rem 0 1rem 0;
+  list-style: none;
+  > li,
+  &--sublist {
+		margin: 0;
+		padding-left: 1.26rem;		 
+		text-indent: -1.4rem;
+	}
+	&--sublist { padding-left: .198rem; }
+	> li::before {	
+		margin-right: 1.05rem;
+    color: $colorMedium;
+    content: "▪";
+	}
+}
+.unbulleted-list {	
+	padding: 0;
+  margin: 0 0 1rem 0;
+  list-style: none;
+	> li { margin: 0; }
+}
+.definition-list {
+	position:relative;
+	dt {
+		position: relative;
+		padding-left: 1.18rem;
+		color: #000;
+		font-weight: 500;
+		border-left: solid 2px $colorMedium;
+	}
+	dd { padding-left: 1rem;	}
+}
+.numeric-list {	
+  margin: -.5rem 0 1rem 0;
+  padding: 0 0 0 1.588rem;  
+  list-style: none;
+  counter-reset: numlist;
+  > li::before {		
+		position: absolute;
+    left: -.63rem;
+    width: 1.588em;
+		color: $colorMedium;
+		text-align: right;
+    content: counter(numlist) ". ";
+		counter-increment: numlist;
+  }
+  &--sublist {
+    > li::before {		
+      position: relative;
+      left: 0 !important;
+      width: 1.588em;
+      color: $colorMedium;
+      text-align: right;
+      content: counter(numlist) ". ";
+      counter-increment: numlist;
+    }
+  }
+}
+.illustrated-list {
+  padding: 0;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+  
+/* SLIDER
+   Inclui propriedades para implementacao do slider. */
+.slick-list {
+  margin: 0 auto 2rem;	
+  max-width: 90%;
+	background-color: #fff;
+	border: solid 1px $greyMedium;	
+}
+.slick-dots li button::before {
+	color: $colorMedium;
+	font-size: 1rem;
+}
+.slick-slide { padding: 1.588rem; }
+[dir=ltr] .slick-slide { float: left; }/* Correção de bug bizarro de alteração de ordem. */
+.panel-slider {
+	&__btn {
+		position: absolute;
+    top: 50%;
+    z-index: 10;
+		margin-top: -1rem;
+		padding-bottom: .25rem;
+		color: #fff;
+		background-color: $colorMedium;
+		border: none;
+		border-radius: 5px;		
+		svg {
+      vertical-align: middle;
+      fill: #fff;
+    }
+		&--prev { left: 0; }
+		&--next { right: 0; }
+	}
+}
+
+/* IMAGE ZOOM
+   Inclui propriedades para implementacao do zoom em imagens. */
+.img-zoom {
+  position: relative;
+  cursor: zoom-in;  
+  &__img {
+    position: relative;
+    top: 0;
+    left: 0;
+  } 
+  &__zoom-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 200%;
+    opacity: 0;
+    transition: all .3s;
+    -webkit-box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 15px 3px rgba(0,0,0,0.5);
+    &:hover { opacity: 1; }
+  }   
+}
+
+/* GRÁFICOS
+   Inclui propriedades para implementacao de gráficos. */
+.chart-box {
+  margin-bottom:2rem;
+  padding:1rem;
+  background-color:#fff;
+  &__notes {
+    font-size:.794rem;
+    line-height:1rem;
+    > p:last-child { margin-bottom:0; }
+  }
+  &__notes-title {
+    font-size:.794rem;
+    margin-bottom:.5rem;
+  }
+}
+
+/* MAPA INTERATIVO
+   Inclui propriedades para implementacao do mapa Leaflet. */
+   .interactive-map {
+    z-index:10;
+  }
+
+.text-with-icon {
+  display: flex;
+
+  .icon-container {
+    display: flex;
+    align-content: center;
+    flex: 0 0 100px;
+    padding-right: 0.5rem;
+  }
+
+  .icon-container > img,
+  .icon-container > svg {
+    width: 100%;
+  }
+}
+

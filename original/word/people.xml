@@ -1,0 +1,17 @@
+<w15:people mc:Ignorable="w15" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml">
+  <w15:person w15:author="Aline Silva">
+    <w15:presenceInfo w15:providerId="Windows Live" w15:userId="3836c6474776125b" />
+  </w15:person>
+  <w15:person w15:author="Breno Tiago Novello Trotta de Oliveira">
+    <w15:presenceInfo w15:providerId="AD" w15:userId="S::breno.oliveira@ibge.gov.br::a0a99429-7310-4ff2-966c-130c706aaefd" />
+  </w15:person>
+  <w15:person w15:author="Eduardo Correa Goncalves">
+    <w15:presenceInfo w15:providerId="AD" w15:userId="S::ecorrea@ibge.gov.br::cb454738-72d6-4f9b-9a0e-d1ee5fb20f44" />
+  </w15:person>
+  <w15:person w15:author="Marcelo Rodrigues de Holanda Maia">
+    <w15:presenceInfo w15:providerId="AD" w15:userId="S::marcelo.h.maia@ibge.gov.br::e3c965c9-441b-4e62-9490-eee32b7e8de7" />
+  </w15:person>
+  <w15:person w15:author="Aline Bezerra da Silva">
+    <w15:presenceInfo w15:providerId="AD" w15:userId="S::1807108@ibge.gov.br::dab2b52f-85d8-49e3-aa89-e53093e85bd8" />
+  </w15:person>
+</w15:people>

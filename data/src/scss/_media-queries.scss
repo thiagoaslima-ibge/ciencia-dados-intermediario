@@ -1,0 +1,89 @@
+/* MEDIA QUERIES */
+@media (min-width: $breakPointSm)  {
+  html {
+    font-size:21px; /* Tamanho base de fonte :ROOT em desktop */
+    border:solid 10px $colorMedium;
+	}	
+  .ss_hide { display:inherit;	}
+	.inverted-border { border:solid 10px #fff; }
+	.bulleted-list {
+		> li { padding-left:0; }
+		&--sublist {
+			margin-left:.198rem;
+			padding-left:1.26rem;
+		}
+	}	
+	.definition-list {
+		dt { left:-1.26rem; }
+		dd { padding-left:0; }
+	}	
+	.numeric-list {
+		padding:0;
+		> li::before { left:-2rem; }
+	}
+	.timeline {
+		&__baseline { visibility:visible; }
+		&__content-box {
+			&:nth-child(2) { margin-top:0; }
+		}
+	}
+	.video-content {
+		&--focus { transform:scale(1.26); }
+	}
+	.video-wrapper {
+		&__iframe {
+			&--focus { transform:scale(1.26); }
+		}
+	}
+	.credits {
+		&__higher-unit { position:relative; }
+		&__initials {
+			position:absolute;
+			left:-4.5rem;
+			display:inline;
+			text-align:right;
+		}
+	}
+}
+
+@media (min-width: $breakPointMd)  {
+	.cover-footer__brand-list { display: block; }
+	.course-details {
+		&__unit {	font-size: 1.26rem; }
+		&__name {	font-size: 2.52rem;	}
+	}
+}
+
+/* PRINT STYLES */
+@media print {
+    * {
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster: h5bp.com/s */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited { text-decoration: underline; }
+    a[href]:after { content: "(" attr(href) ")"; }
+    abbr[title]:after { content: "(" attr(title) ")"; }
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after { content: ""; }
+	pre,
+	blockquote {
+      border:1px solid #999;
+      page-break-inside:avoid;
+    }
+    thead { display: table-header-group; }
+	tr,
+	img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+	p,
+	h2,
+	h3 {
+      orphans: 3;
+      widows: 3;
+    }
+	h2,
+	h3 { page-break-after: avoid; }
+}
