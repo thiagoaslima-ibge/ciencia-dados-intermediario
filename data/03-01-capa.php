@@ -29,8 +29,8 @@
 		<script src="dist/js/nav.min.js"></script>
 	</head>
 
-	<!-- <body class="cover--example" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
-	<body class="cover--example curso-tecnologia" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
+	<body class="cover--example" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
+	<!-- <body class="cover--example curso-tecnologia" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
 		<!--[if lt IE 7]>
 			<p class="obsoletebrowser">Você está usando um navegador de internet obsoleto. Por favor atualize para uma melhor experiência.</p>
 		<![endif]-->
