@@ -26,7 +26,6 @@ include "head.php";
 			?>
 		</header>
 
-
 		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<p>O k-NN (k-<i>nearest-neighbors</i> – <strong>k vizinhos mais próximos</strong>) é provavelmente o mais simples dos algoritmos de classificação. Seu princípio de funcionamento é baseado no aprendizado por analogia: ele determina a classe de um novo objeto levando em conta apenas um pequeno número de objetos da base de treinamento, avaliados como os mais <strong>similares</strong> ao novo objeto. Esses são considerados os seus vizinhos mais próximos, daí o nome do algoritmo.</p>
 			<p>A seguir, as etapas de treinamento e classificação do k-NN serão explicadas. Em seguida, discutiremos algumas características chave do algoritmo, assim como seus pontos fortes e fracos. Utilizaremos a mesma abordagem para os demais métodos de classificação cobertos ao longo desta unidade.</p>
@@ -166,7 +165,6 @@ include "head.php";
 						<mn>2</mn>
 					</msup>
 				</msqrt>
-
 			</math>
 
 			<p>
