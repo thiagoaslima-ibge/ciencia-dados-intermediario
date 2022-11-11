@@ -4,7 +4,7 @@ $moduleTitle = "";
 // Titulo do topico
 $topicTitle = "Métodos de classificação";
 // Titulo da pagina
-$pageTitle = "Algoritmos de classificação: Naïve Bayes";
+$pageTitle = "Algoritmos de classificação: Algoritmos de classificação: Random Forest ou Floresta Aleatória";
 // Subtitulo da pagina
 $pageSubtitle = "";
 // Inclusao do cabeçalho do curso	
