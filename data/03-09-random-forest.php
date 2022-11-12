@@ -44,16 +44,62 @@ include "head.php";
 			?>
 		</header>
 
-		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<p>Suponha que seu computador está travando com frequência e você deseja descobrir o motivo. Em vez de chamar apenas um técnico para examiná-lo, você poderia optar por chamar vários. Neste caso, se uma determinada causa para o problema for mais citada do que qualquer outra, você a consideraria como a diagnóstico correto. Ou seja, a causa do problema de travamento seria determinada de acordo com uma espécie de votação majoritária, onde cada técnico daria o seu voto. A sua expectativa é que considerar a opinião mais prevalente de um grupo de técnicos é mais confiável do que levar em conta a opinião de um único profissional.</p>
 			<p>A Floresta Aleatória (<i>Random Forest</i> – RF) é uma técnica de classificação que trabalha com uma ideia similar. Ela combina as decisões de múltiplos modelos para otimizar a eficácia do processo de classificação. Mais especificamente, uma RF é um <strong>modelo de classificação composto</strong>, que é formado por um conjunto <i>(ensemble)</i> de classificadores do tipo árvore de decisão. Cada árvore de decisão do grupo é gerada com o uso de subconjuntos independentes e aleatórios de atributos e objetos. Para prever a classe de um novo objeto, cada classificador individual vota e a classe mais popular é devolvida ao usuário.</p>
 			<p>A Figura 10 resume o funcionamento de um classificador RF. Nas subseções a seguir, utilizaremos essa figura como base para explicar as etapas de treinamento e classificação da RF.</p>
-
-			<h2>Etapa de treinamento</h2>
+		</div>	
+			
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<h2>ETAPA DE TREINAMENTO</h2>
 			<p>Um modelo RF combina uma série de k modelos de árvore de decisão, AD1, AD2, ..., ADk, com o objetivo de criar um modelo composto otimizado de classificação. Cada árvore de decisão individual é também chamada de classificador base <i>(base classifier)</i>.</p>
-			<p>Como ocorre com qualquer técnica de classificação, antes de qualquer coisa precisamos de uma base de dados de treinamento D, composta por d objetos. O treinamento das k árvores de decisão (lado esquerdo da Figura 10) que compõem a RF é feito em k iterações. Para cada iteração (i=1, 2, ..., k), um conjunto de treinamento Di, com d objetos é gerado a partir de um processo de amostragem com reposição. Sendo assim, cada Di tem o mesmo número de objetos do que a base de treinamento original D, porém alguns objetos podem aparecer mais de uma vez, enquanto outros podem não ocorrer em Di. Esse processo também é conhecido como bootstrapping. </p>
+			<p>Como ocorre com qualquer técnica de classificação, antes de qualquer coisa precisamos de uma base de dados de treinamento D, composta por d objetos. O treinamento das k árvores de decisão (lado esquerdo da Figura 10) que compõem a RF é feito em k iterações. Para cada iteração (i=1, 2, ..., k), um conjunto de treinamento Di, com d objetos é gerado a partir de um processo de amostragem com reposição. Sendo assim, cada Di tem o mesmo número de objetos do que a base de treinamento original D, porém alguns objetos podem aparecer mais de uma vez, enquanto outros podem não ocorrer em Di. Esse processo também é conhecido como <i>bootstrapping</i>.</p>
+			<p>A cada iteração <i>i</i>, uma árvore de decisão <i>ADi</i> é treinada a partir de <i>Di</i> com o uso do algoritmo CART (ou outro algoritmo de construção de ADs).  As árvores devem ser criadas com tamanho máximo e sem poda. Entretanto, a cada nó de <i>ADi</i>, apenas um <strong>subconjunto de atributos candidatos</strong> é considerado para decidir qual será a melhor divisão. Esse subconjunto é <strong>definido de maneira aleatória</strong>.</p>
+			<p>O modelo final será então composto por diversas árvores, que possuirão estruturas diferentes em termos de quantidade e disposição dos nós (Figura 11), uma vez que cada uma foi treinada a partir de um subconjunto diferente de observações e atributos, sempre determinados de forma independente e aleatória. Daí, o nome Floresta Aleatória.</p>
+		</div>	
 
-			<!-- Tabela [inicio] -->
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<h2>ETAPA DE CLASSIFICAÇÃO</h2>
+				<p>
+					Uma vez que a RF tenha sido gerada, o processo para classificar um novo objeto (lado direito da Figura 10)
+					é muito simples. Durante a classificação, cada árvore vota (ou seja, determina individualmente a classe do objeto)
+					e a classe mais votada é retornada.
+				</p>
+		</div>
+		
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<h2>DISCUSSÃO</h2>
+				<p>
+					Um modelo RF tende a ter um desempenho preditivo superior do que cada uma de suas árvores de decisão
+					individualmente. Intuitivamente, podemos ter a percepção de que os classificadores base (árvores) que 
+					compõem a RF até poderão cometer erros de classificação, porém a RF propriamente dita só errará a 
+					classificação de um novo objeto quando mais da metade deles se equivocarem. 
+				</p>
+				<p>
+					De fato, muitos trabalhos recentes demonstram que, nos mais diversos domínios de aplicação, as RFs possuem
+					desempenho preditivo tão bom quanto o de métodos bem mais complexos e computacionalmente caros, 
+					como as redes neurais profundas. Elas oferecem ainda a vantagem de serem eficientes em bases de dados 
+					muito volumosas, já que consideram um número reduzido de atributos candidatos para gerar cada nó. 
+					Ainda falando sobre eficiência, é importante observar que as etapas de treinamento e classificação da RF
+					são facilmente paralelizáveis, pois cada árvore individual pode ser alocada a uma diferente CPU do computador.
+				</p>
+				<p>
+					As RFs obtêm melhores resultados quando há diversidade entre os classificadores base que a compõem, ou seja,
+					de maneira ideal, deve existir baixa correlação entre as suas ADs. Diferentes observações empíricas
+					demonstraram que as RFs não são sensíveis ao número de atributos selecionados como candidatos a cada nó.
+					Considerando uma base composta por <i>d</i> atributos, tipicamente <i>log2(d + 1)</i> costumam ser escolhidos.
+				</p>
+				<p>
+					Em resumo, um modelo RF tende a possuir acurácia muito superior a uma árvore de decisão gerada pelo CART. 
+					Esta melhora na acurácia ocorre principalmente porque o modelo composto reduz a variância dos classificadores
+					individuais. Porém, uma importante desvantagem das RFs em relação ao CART – e que é relevante para problemas
+					no âmbito do serviço público – é o fato de que uma <strong>RF não é diretamente interpretável</strong>, ao contrário do que
+					ocorre com uma árvore de decisão.
+				</p>
+		</div>	
+			
+		<!-- Tabela [inicio] -->
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<div class="table-container">
 				<table class="table">
 					<caption class="table__title">Base com os dados de endividamento de casais jovens.</caption>
