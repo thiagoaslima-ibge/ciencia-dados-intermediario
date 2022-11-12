@@ -98,6 +98,23 @@ include "head.php";
 				</p>
 		</div>	
 			
+		<!-- Quadro [inicio] -->
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<div class="table-container">
+				<table class="table">
+					<caption class="table__title">Ensembles</caption>
+					<thead>
+						<tr>
+							<th scope="col">
+								A técnica Random Forest é a mais conhecida dentre as técnicas para a construção de modelos
+								compostos, mais conhecidos como ensembles (ou <i>ensemble models</i>). Porém existem algumas outras técnicas
+								para o aprendizado de <i>ensembles</i>, como <i>Bagging Meta-Estimator</i>, <i>AdaBoost</i> e <i>Gradient Boosting</i>,
+								entre outras. Para uma introdução ao tema, consulte o artigo disponibilizado em
+								[https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/]
+							</th>
+						</tr>
+		
+		
 		<!-- Tabela [inicio] -->
 		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<div class="table-container">
