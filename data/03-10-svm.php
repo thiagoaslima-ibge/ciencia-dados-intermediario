@@ -4,7 +4,7 @@ $moduleTitle = "";
 // Titulo do topico
 $topicTitle = "Métodos de classificação";
 // Titulo da pagina
-$pageTitle = "Algoritmos de classificação: Naïve Bayes";
+$pageTitle = "Algoritmos de classificação: <i>Support Vector Machine</i> (SVM)";
 // Subtitulo da pagina
 $pageSubtitle = "";
 // Inclusao do cabeçalho do curso	
@@ -45,8 +45,86 @@ include "head.php";
 		</header>
 
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-			<p>O algoritmo naïve Bayes (NB) é um classificador fundamentado em diversos conceitos da Teoria da Probabilidade, como probabilidade condicional, independência condicional, regra da multiplicação, distribuição conjunta de probabilidades e, especialmente, em um importante teorema chamado Teorema de Bayes. Uma característica atraente deste classificador é a sua capacidade de produzir diretamente estimativas de probabilidade para cada rótulo de classe em vez de simples classificações. Além disso, o classificador se destaca por seu baixo custo computacional na etapa de treinamento, o que significa que ele gera o modelo de classificação em um tempo mais rápido em comparação a outros algoritmos. As subseções a seguir descrevem as etapas de treinamento e classificação do NB.</p>
+			<p>
+				<span class="small-caps">SVM</span> é um algoritmo desenvolvido em grande parte na <span class="small-caps">AT&T Bell</span>, cujo primeiro artigo
+				científico contendo a sua descrição foi publicado no início dos anos 90. Ele é, sem dúvida, o mais complexo 
+				dentre os algoritmos de classificação introduzidos neste curso. Porém, a sua intuição não é difícil de ser
+				entendida. Veja a seguir.
+			</p>
+			<p>
+				Considere a base de treinamento representada graficamente na Figura 12. Nela, temos objetos de duas classes – 
+				quadradinhos vermelhos e bolinhas azuis – e uma fronteira de decisão gerada por algum algoritmo de classificação.
+				Esta fronteira de decisão separa os objetos dessas classes. Ela pode também ser chamada de <strong>hiperplano separador</strong>.
+				A figura mostra ainda dois novos objetos <i>A</i> e <i>B</i>, que deverão ser classificados de acordo com o hiperplano separador.
+			</p>
+		</section>
 
+		<!-- Imagem média [inicio] -->
+		<figure class="img-container">
+		<div
+			class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right"
+		>
+			<picture>
+			<source
+				srcset="dist/img/image16.png"
+				media="(min-width:1200px)"
+			/>
+			<source
+				srcset="dist/img/image16.png"
+				media="(min-width:600px)"
+			/>
+			<source
+				srcset="dist/img/image16.png"
+				media="(min-width:1px)"
+			/>
+			<img
+				class="image"
+				src="dist/img/image16.png"
+				alt="Representação gráfica de uma base de dados de treinamento com objetos de duas classes."
+			/>
+			</picture>
+		</div>
+		<figcaption
+			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
+		>
+			<div class="img-container__top-line"></div>
+			Figura 12. Representação gráfica de uma base de dados de treinamento com objetos de duas classes. Apresenta-se ainda um hiperplano separador dos objetos dessas classes e dois novos objetos A e B.
+		</figcaption>
+		</figure>
+		<!-- Imagem média [fim] -->
+
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<p>
+				Observando a figura, vemos que <i>A</i> está muito distante da fronteira gerada pelo algoritmo. Sendo assim, 
+				se você “arriscasse” uma predição para <i>A</i>, certamente diria que é um objeto da classe quadradinho vermelho 
+				com <strong>muita confiança</strong>. Por outro lado, o novo objeto <i>B</i> está muito próximo da fronteira, mas ainda do lado dos 
+				objetos da classe quadradinho vermelho. É natural pensar que caso essa fronteira se movimentasse um pouco, 
+				talvez <i>B</i> passasse para o lado das bolinhas azuis. Na prática, a movimentação da fronteira pode ocorrer em 
+				diferentes situações. Por exemplo, se obtivermos novos objetos de treinamento e construirmos novamente o modelo 
+				com a base de dados modificada. Ou então se usarmos a mesma base de treinamento, porém empregando outro algoritmo 
+				para aprender o modelo. 
+			</p>
+			<p>
+				Sendo assim, intuitivamente, temos muito mais confiança na predição de <i>A</i> do que de <i>B</i>. Em outras palavras, 
+				se tivéssemos que escolher um dentre os dois novos objetos para apostar qual deles é da classe quadradinho vermelho, 
+				certamente preferiríamos apostar em <i>A</i> para não corrermos risco de perder dinheiro! E o <span class="small-caps">SVM</span> trabalha exatamente 
+				considerando essa ideia: a partir de uma base de dados de treinamento, é interessante encontrar uma fronteira de 
+				decisão que nos permita fazer todas as classificações de forma correta e com a maior confiança possível. Para tal, 
+				o <span class="small-caps">SVM</span> busca pela fronteira que tenha a máxima distância para os objetos das duas classes. 
+			</p>
+			<p>
+				Na próxima seção, apresentamos a ideia básica adotada na etapa de treinamento do algoritmo. Como mencionado no 
+				início da seção, o algoritmo é complexo e utiliza diversas técnicas matemáticas (desde princípios da geometria 
+				analítica até técnicas de otimização). Uma explicação detalhada sobre o <span class="small-caps">SVM</span> necessita de muitas páginas de texto 
+				e se encontra fora do escopo de nosso curso. Porém, pode ser encontrada em 
+				<a href="https://see.stanford.edu/materials/aimlcs229/cs229-notes3.pdf">
+				https://see.stanford.edu/materials/aimlcs229/cs229-notes3.pdf
+				</a>.
+			</p>
+		
+		</section>
+		
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<h2>Etapa de treinamento</h2>
 			<p>O princípio básico do NB consiste em treinar um modelo que possibilite a aplicação do <a href="https://pt.wikipedia.org/wiki/Teorema_de_Bayes"><strong>Teorema de Bayes</strong> (ou regra de Bayes)</a> para estimar a classe mais provável de um novo objeto. Para tal, na etapa de treinamento o algoritmo computa uma tabela de probabilidades que resume a base de dados de treinamento com informações suficientes para a aplicação deste teorema.</p>
 			<p>A seguir apresentaremos um exemplo que mostra detalhadamente o processo de treinamento de um classificador NB. Considere a base de dados apresentada na Tabela 4. Suponha que as 15 observações desta base representem dados de uma pesquisa sobre o endividamento de casais jovens. A base registra se o casal possui filhos, a escolaridade do(a) responsável pela família e se a família possui ou não algum tipo de dívida com o cartão de crédito.</p>
