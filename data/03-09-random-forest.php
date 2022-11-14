@@ -213,36 +213,22 @@ include "head.php";
 				</p>
 		</section>	
 			
-		<!-- Quadro [inicio] -->
-		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-			<div class="table-container">
-				<table class="table">
-					<caption class="table__title"></caption>
-					<thead>
-						<tr>
-							<th scope="col">
-								
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								Ensembles
-							</td>
-						</tr>
-						<tr>
-							<td>
-								A técnica Random Forest é a mais conhecida dentre as técnicas para a construção de modelos
-								compostos, mais conhecidos como ensembles (ou <i>ensemble models</i>). Porém existem algumas outras técnicas
-								para o aprendizado de <i>ensembles</i>, como <i>Bagging Meta-Estimator</i>, <i>AdaBoost</i> e <i>Gradient Boosting</i>,
-								entre outras. Para uma introdução ao tema, consulte o artigo disponibilizado em
-								<a href="https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/">
-								https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
-								</a>
-							</td>
-						</tr>
-		<!-- Quadro [fim] -->
+		<!-- Destaque [inicio] -->
+		<section class="feature feature--example">
+			<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+					<h2 class="feature__title">Ensembles</h2>
+					<p>
+						A técnica Random Forest é a mais conhecida dentre as técnicas para a construção de modelos
+						compostos, mais conhecidos como ensembles (ou <i>ensemble models</i>). Porém existem algumas outras técnicas
+						para o aprendizado de <i>ensembles</i>, como <i>Bagging Meta-Estimator</i>, <i>AdaBoost</i> e <i>Gradient Boosting</i>,
+						entre outras. Para uma introdução ao tema, consulte o artigo disponibilizado em
+						<a href="https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/">
+						https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
+						</a>
+					</p>
+			</div>
+		</section>
+		<!-- Destaque [fim] -->
 		
 		
 		<!-- Tabela [inicio] -->
