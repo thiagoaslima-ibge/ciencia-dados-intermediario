@@ -244,7 +244,7 @@ include "head.php";
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<p>
 				Mas então, qual hiperplano será escolhido? A resposta é: o <span class="small-caps">SVM</span> irá procurar 
-				pelo <strong>hiperplano de margem máxima</strong> (<i>Maximum Margin Hyperplane<i> – <span class="small-caps">MMH</span>). Basicamente é o hiperplano que consegue 
+				pelo <strong>hiperplano de margem máxima</strong> (<i>Maximum Margin Hyperplane</i> – <span class="small-caps">MMH</span>). Basicamente é o hiperplano que consegue 
 				classificar perfeitamente os objetos de treino e, ao mesmo tempo, é capaz de produzir a maior distância (margem) 
 				entre qualquer objeto da classe -1 e qualquer outro objeto da classe 1. A Figura 14 mostra um exemplo.
 			</p>
@@ -373,7 +373,7 @@ include "head.php";
 			<p>d(z)=∑_(i=1)^l▒〖yi×αi×xi×t+bo〗</p>
 			<p>
 				É a partir dessa fórmula que podemos classificar novos objetos. Basicamente, basta “plugar” as 
-				informações de um novo objeto (representado na fórmula por <i>t<i>). Se o resultado for positivo, o 
+				informações de um novo objeto (representado na fórmula por <i>t</i>). Se o resultado for positivo, o 
 				novo objeto será classificado como +1 e se o resultado for negativo, ele será classificado como -1. 
 			</p>
 			<p>
@@ -385,8 +385,10 @@ include "head.php";
 			<!-- Lista não ordenada [inicio] -->
 			<ul class="bulleted-list">
 				<li>l: número de <span class="small-caps">SV’s</span></li>
-				Para dados linearmente separáveis, os <span class="small-caps">SV’s</span> são um subconjunto dos objetos de treino.</li>
-				Veja que no somatório, os <span class="small-caps">SV’s</span> são os únicos objetos da base de treinamento que são levados em consideração.</li>
+					<ul class="bulleted-list bulleted-list--sublist">
+					<li>Para dados linearmente separáveis, os <span class="small-caps">SV’s</span> são um subconjunto dos objetos de treino.</li>
+					<li>Veja que no somatório, os <span class="small-caps">SV’s</span> são os únicos objetos da base de treinamento que são levados em consideração.</li>
+			</ul>
 				<li>xi: é um SV.</li>
 				<li>yi: rótulo de classe do SV xi</li>
 				<li>t: objeto de teste</li>
