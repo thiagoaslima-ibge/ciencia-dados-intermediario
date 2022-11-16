@@ -2,9 +2,9 @@
 // Titulo da unidade
 $moduleTitle = "";
 // Titulo do topico
-$topicTitle = "Métodos de classificação";
+$topicTitle = "Como avaliar a qualidade de um classificador";
 // Titulo da pagina
-$pageTitle = "Algoritmos de classificação: Naïve Bayes";
+$pageTitle = "Estimativa da eficácia de um modelo de classificação";
 // Subtitulo da pagina
 $pageSubtitle = "";
 // Inclusao do cabeçalho do curso	
@@ -45,13 +45,493 @@ include "head.php";
 		</header>
 
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-			<p>O algoritmo naïve Bayes (NB) é um classificador fundamentado em diversos conceitos da Teoria da Probabilidade, como probabilidade condicional, independência condicional, regra da multiplicação, distribuição conjunta de probabilidades e, especialmente, em um importante teorema chamado Teorema de Bayes. Uma característica atraente deste classificador é a sua capacidade de produzir diretamente estimativas de probabilidade para cada rótulo de classe em vez de simples classificações. Além disso, o classificador se destaca por seu baixo custo computacional na etapa de treinamento, o que significa que ele gera o modelo de classificação em um tempo mais rápido em comparação a outros algoritmos. As subseções a seguir descrevem as etapas de treinamento e classificação do NB.</p>
+			<p>
+				Ao longo desse módulo, aprendemos que, para criar um classificador basta termos em mãos uma base de 
+				dados de treinamento e escolhermos um algoritmo de classificação. Entretanto, antes de colocar um 
+				classificador em produção é preciso <strong>estimar a sua eficácia</strong> (ou desempenho preditivo), isto é, determinar, 
+				com algum grau de certeza, se o classificador terá um bom desempenho para classificar novos objetos. 
+				Afinal de contas, um classificador que faz muitas previsões erradas não teria utilidade prática. 
+				Mas como fazer essa estimativa? O princípio fundamental empregado na avaliação de classificadores consiste em 
+				<strong>utilizar um conjunto de dados de teste</strong> formado por objetos que <strong>não estiveram envolvidos no processo de 
+				treinamento</strong> do classificador.  Basicamente, deve-se aferir se o modelo gerado com os dados de treinamento 
+				conseguirá acertar uma quantidade significativa de classificações quando aplicado aos objetos de teste. 
+				Ou seja, iremos verificar se a <strong>acurácia</strong> (percentual de classificações corretas) do modelo será alta com os 
+				objetos de teste – objetos que não fizeram parte do treinamento e que, por isso, são “novos objetos” para o 
+				classificador. 
+			</p>
+			<p>
+				As duas próximas subseções introduzem, respectivamente, os métodos para avaliação de classificadores e 
+				as medidas que podem ser empregadas para mensurar diferentes aspectos relacionados ao desempenho 
+				preditivo de um classificador
+			</p>
+		</section>
+			
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<h2>1. Métodos para a Avaliação de Modelos de Classificação </h2>
+			<p>
+				O método conhecido como <i>holdout</i> é o mais simples dentre os utilizados para a avaliação de modelos de 
+				classificação. Nesta abordagem, a base de dados rotulada é dividida de forma aleatória em dois conjuntos 
+				(ou partições) independentes: conjunto de treinamento e conjunto de teste (Figura 18). Tipicamente, dois terços 
+				dos dados são alocados para treino e o terço restante é alocado para teste. A divisão deve ser feita de maneira 
+				aleatória, mas idealmente o processo deve garantir que cada classe seja adequadamente representada tanto no 
+				conjunto de treinamento como no de teste (processo conhecido como estratificação). Uma vez que as duas 
+				partições tenham sido definidas, a partição de treino é usada para criar o modelo e a partição de teste para 
+				testá-lo – testar significa medir a acurácia (e outros indicadores) do modelo na partição de teste. 
+			</p>
+		</section>
 
-			<h2>Etapa de treinamento</h2>
-			<p>O princípio básico do NB consiste em treinar um modelo que possibilite a aplicação do <a href="https://pt.wikipedia.org/wiki/Teorema_de_Bayes"><strong>Teorema de Bayes</strong> (ou regra de Bayes)</a> para estimar a classe mais provável de um novo objeto. Para tal, na etapa de treinamento o algoritmo computa uma tabela de probabilidades que resume a base de dados de treinamento com informações suficientes para a aplicação deste teorema.</p>
-			<p>A seguir apresentaremos um exemplo que mostra detalhadamente o processo de treinamento de um classificador NB. Considere a base de dados apresentada na Tabela 4. Suponha que as 15 observações desta base representem dados de uma pesquisa sobre o endividamento de casais jovens. A base registra se o casal possui filhos, a escolaridade do(a) responsável pela família e se a família possui ou não algum tipo de dívida com o cartão de crédito.</p>
+			<!-- Imagem média [inicio] -->
+			<figure class="img-container">
+		<div
+			class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right"
+		>
+			<picture>
+			<source
+				srcset="dist/img/image22.png"
+				media="(min-width:1200px)"
+			/>
+			<source
+				srcset="dist/img/image22.png"
+				media="(min-width:600px)"
+			/>
+			<source
+				srcset="dist/img/image22.png"
+				media="(min-width:1px)"
+			/>
+			<img
+				class="image"
+				src="dist/img/image21.png"
+				alt="Partições geradas pelo método holdout. "
+			/>
+			</picture>
+		</div>
+		<figcaption
+			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
+		>
+			<div class="img-container__top-line"></div>
+			Figura 18: Partições geradas pelo método <i>holdout</i>. 
+		</figcaption>
+		</figure>
+		<!-- Imagem média [fim] -->
+			
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<p>
+				O método <i>holdout</i> é simples, mas tem uma desvantagem importante: para estimar se um classificador possui boa 
+				qualidade ou não, ele aposta todas as suas fichas em uma <strong>única avaliação</strong> envolvendo um modelo construído com uma 
+				partição de treino e testado com uma partição de teste, ambas definidas de forma aleatória. Fazer um único teste 
+				usando apenas essas duas partições parece um pouco arriscado, não?
+			</p>
+			<p>
+				Felizmente, existem técnicas capazes de obter estimativas mais confiáveis para o desempenho preditivo 
+				de um classificador.  Uma delas é a validação cruzada (<i>cross-validation</i>). Nesta técnica, a base rotulada 
+				é dividida em <i>k</i> partições (<i>folds</i>) <i>D<sub>1</sub>, D<sub>2</sub>, ..., D<sub>k</sub></i>, onde todas deverão ter o tamanho igual ou 
+				aproximadamente igual. Na Figura 19, apresenta-se um exemplo onde <i>k</i>=10, um dos valores mais comumente 
+				utilizados. Após a divisão, são realizadas <i>k</i> rodadas de treino e teste. A cada iteração <i>i</i>, 
+				a partição <i>D<sub>i</sub></i> é reservada para teste e as <i>k-1</i> partições restantes são utilizadas para treinar o modelo. 
+				Por exemplo, para <i>k</i>=1, reserva-se as observações pertencentes a <i>D<sub>1</sub></i> para teste, e utiliza-se as 
+				observações pertencentes a <i>D<sub>2</sub></i> até as pertencentes a <i>D<sub>10</sub></i> para treinamento. Quando <i>k</i>=2, reserva-se as 
+				observações de <i>D<sub>2</sub></i> para teste, e utiliza-se as observações de <i>D<sub>1</sub></i> e <i>D<sub>3</sub></i> até <i>D<sub>10</sub></i> para treinamento. 
+				E assim, sucessivamente. A acurácia final estimada para o modelo será igual à acurácia média das <i>k</i> rodadas. 
+				Sendo assim, ao contrário do que ocorre com o método <i>holdout</i>, na validação cruzada a estimativa da acurácia 
+				não é feita considerando o resultado obtido sobre uma única partição de treino e uma única teste, mas é na 
+				verdade uma média do desempenho preditivo de <i>k</i> modelos diferentes, testados sobre <i>k</i> bases de testes diferente. 
+				Isso constitui uma importante vantagem.
+			</p>
+		</section>
 
-			<!-- Tabela [inicio] -->
+		<!-- Imagem média [inicio] -->
+		<figure class="img-container">
+		<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
+			<picture>
+			<source
+				srcset="dist/img/image23.png"
+				media="(min-width:1200px)"
+			/>
+			<source
+				srcset="dist/img/image23.png"
+				media="(min-width:600px)"
+			/>
+			<source
+				srcset="dist/img/image23.png"
+				media="(min-width:1px)"
+			/>
+			<img
+				class="image"
+				src="dist/img/image23.png"
+				alt="Partições geradas pelo método de validação cruzada, quando k=10."
+			/>
+			</picture>
+		</div>
+		<figcaption
+			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
+		>
+			<div class="img-container__top-line"></div>
+			Figura 19: Partições geradas pelo método de validação cruzada, quando <i>k</i>=10. 
+		</figcaption>
+		</figure>
+		<!-- Imagem média [fim] -->
+
+		<!-- Destaque [inicio] -->
+	<section class="feature feature--example">
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<h2 class="feature__title">Para saber mais:</h2>
+			<p>
+				É importante comentar que além da validação cruzada, existem outras técnicas para estimar a qualidade 
+				de classificadores, dentre as quais:
+			</p>
+		<!-- Lista não ordenada [inicio] -->
+			<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<ul class="bulleted-list">
+			<li>
+				Validação cruzada repetida<a href="https://machinelearningmastery.com/repeated-k-fold-cross-validation-with-python/">
+				https://machinelearningmastery.com/repeated-k-fold-cross-validation-with-python/
+			</a>
+			</li>
+			<li>
+				<i>leave-one-out</i><a href="https://www.statology.org/leave-one-out-cross-validation/">
+				https://www.statology.org/leave-one-out-cross-validation/</a>
+			</li>
+			<li>
+				<i>bootstrap</i><a href="https://sebastianraschka.com/blog/2016/model-evaluation-selection-part2.html">
+				https://sebastianraschka.com/blog/2016/model-evaluation-selection-part2.html</a>
+			</li>
+		</div>
+		<!-- Lista não ordenada [Fim] -->
+	</section>
+		<!-- Destaque [fim] -->
+
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<h2>2. Métricas de Desempenho Preditivo</h2>
+		<p>
+			Nessa seção, apresentaremos métricas capazes de medir diferentes aspectos que definem a efetividade de um 
+			classificador. As métricas que apresentaremos podem ser calculadas a partir de uma importante estrutura 
+			conhecida como <strong>matriz de confusão</strong> (<span class="small-caps">MC</span>). 
+		</p>
+		<p>
+			A finalidade de uma <span class="small-caps">MC</span> é armazenar todos os diferentes tipos de erros e acertos realizados pelo classificador 
+			ocorridos durante o processamento de um conjunto de objetos de teste. Trata-se simplesmente de uma matriz quadrada 
+			que indica as classificações corretas e erradas após o classificador ter sido testado. Mais formalmente, 
+			uma <span class="small-caps">MC</span> é uma matriz quadrada <i>m</i> x <i>m</i>, onde <i>m</i> representa o número de rótulos de classe envolvidos no problema. 
+			Cada célula <i>c<sub>ij</sub></i> denota o número de objetos de teste que o classificador associou à classe <i>i</i> e que, de fato, 
+			pertencem à classe <i>j</i>. Desta forma, as células da diagonal principal sempre irão conter o número de objetos 
+			corretamente classificados pelo modelo.
+		</p>
+		<p>
+			A Tabela 8 apresenta o formato de uma <span class="small-caps">MC</span> hipotética produzida após o processo de teste de um classificador 
+			em um problema com <i>m</i> = 3, ou seja, um problema de classificação multiclasse envolvendo 3 classes, neste caso 
+			{“a”, “b”, “c”}. Nessa matriz, como em qualquer outra, as classes reais estão nas linhas e as preditas nas 
+			colunas. Veja que neste exemplo, o classificador acertou a maioria das classificações 
+			(a maior parte dos resultados caiu na diagonal principal).
+		</p>
+	
+	</section>	
+		
+		<!-- Tabela [inicio] -->
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+				<div class="table-container">
+					<table class="table tabletext-table">
+						<caption class="table__title">Tabela 8:  Matriz de confusão hipotética em um problema com 3 classes (<i>m</i> = 3)</caption>
+					<th></th>	
+					<th>a</th>
+					<th>b</th>
+					<th>c</th>
+				</tr>
+				<tr>
+					<th>a</th>
+					<td>49</td>
+					<td>14</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<th>b</th>
+					<td>7</td>
+					<td>315</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th>c</th>
+					<td>8</td>
+					<td>0</td>
+					<td>77</td>
+				</tr>
+			</table>
+			</div>
+		</section>
+		<!-- Tabela [FIM] -->
+		
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<p>
+				Considere a primeira linha, que trata dos resultados referentes ao rótulo de classe “a”. O valor 49 
+				indica que 49 objetos da base de teste cuja classe real é “a” foram corretamente classificados como classe 
+				“a”. Já o valor 14 indica o número de objetos cuja classe real é “a”, mas que foram incorretamente 
+				classificados como “b”. Por fim, o valor 7 indica o número de objetos cuja classe real é “a”, mas que 
+				foram incorretamente classificados como “c”. De maneira análoga a segunda e terceira linha da tabela 
+				apresentam os resultados referentes às classes “b” e “c”, respectivamente.
+			</p>
+			<p>
+				A partir dessa matriz, torna-se possível calcular diferentes medidas de desempenho. A seguir apresentaremos 
+				as 4 mais conhecidas: Acurácia (<i>acuraccy</i>), Precisão (<i>precision</i>), Revocação (<i>recall</i>) e Medida <span class="small-caps">F1</span> (<i>f1 measure</i>). 
+			</p>
+			<p>
+				<strong>Acurácia (<i>Ac</i>)</strong> esta medida avalia o desempenho médio do classificador, consistindo na proporção de 
+				instâncias corretamente classificadas durante o processo de teste. Nesta fórmula, <i>d</i> é o total de objetos 
+				de teste, <i>m</i> é o número de classes e <i>TP<sub>k</sub></i> corresponde ao número de objetos da classe <i>k</i> que foram corretamente 
+				classificados como <i>k</i> durante o processo de teste do classificador. <i><span class="small-caps">TP</span></i> é a abreviação de <i>True Positives</i> – ou 
+				verdadeiro positivos (sempre corresponde a um valor que faz parte da diagonal principal da <span class="small-caps">MC</span>).
+			</p>
+		</section>
+
+		<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+			<mi>A</mi><mi>c</mi><mi> </mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>d</mi></mrow></mfrac><mrow><munderover><mo stretchy="false">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>m</mi></mrow></munderover><mrow><msub><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mrow></math>
+	
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<p>
+			No caso da <span class="small-caps">MC</span> da Tabela 8, o total de objetos da base de teste é <i>d</i> = 477 (soma dos valores de todas as células da matriz). 
+			Sendo assim, a Acurácia do classificador na base de teste é calculada da seguinte forma:
+		</p>
+		<p>
+			Ac = (49 + 315 + 77) / 477 = 0,9245
+		</p>
+		<p>
+			Ou seja, o classificador acertou a classe de 92,45% dos objetos de teste.
+		</p>
+		<p>
+			Entretanto, também é interessante avaliar o desempenho do classificador <strong>por classe</strong>, pois muitas vezes o 
+			classificador pode ser efetivo para classificar objetos de uma determinada classe, mas não ser efetivo para 
+			outras. Para tal, podemos fazer uso das medidas de Precisão e Revocação.
+		</p>
+			<strong>Precisão (Pr)</strong> a precisão da classe ck mede a quantidade de exemplos classificados como 
+			positivos, que de fato são positivos. 
+	
+	<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+		<mrow><mrow><mi mathvariant="normal">Pr</mi></mrow><mo>⁡</mo><mrow><mfenced separators="|"><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfenced></mrow></mrow><mo>=</mo><mfrac><mrow><msub><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow><mrow><msub><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>+</mo><mi> </mi><msub><mrow><mi>F</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfrac><mi> </mi></math>
+
+		<p>
+			Então vamos começar pela classe “a”. Considerando a <span class="small-caps">MC</span> da Tabela 8, quem são os <span class="small-caps">TPs</span> (<i>True Positives</i>) 
+			dessa classe? São os objetos de teste que são “a” e foram classificados como “a”. Esta informação está 
+			representada em uma única célula da matriz, que é a célula [1,1] (49 casos). 
+			E quem são os <span class="small-caps">FPs</span> (<i>False Positives</i> – ou falsos positivos) da classe “a”? São os objetos que não são “a”, 
+			mas que o classificador equivocadamente classificou como “a” durante o processo de teste. Esses objetos 
+			podem ser achados na 1a coluna da matriz, nas linhas 2 e 3 (linhas referentes às classes reais “b” e “c”). 
+			Ou seja, o denominador é o total da coluna “a”.
+		</p>
+		<p>
+			Tendo identificado os <span class="small-caps">TPs</span> e <span class="small-caps">FPs</span>, o cálculo de <span class="small-caps">Pr</span>(“a”) é trivial. Basta fazer:
+		</p>
+		<p>
+			<span class="small-caps">Pr</span>(“a”) = <span class="small-caps">TP</span><sub>a</sub> / (<span class="small-caps">TP</span><sub>a</sub> + <span class="small-caps">FP</span><sub>a</sub>) = 49 / (49 + 7 + 8) = 49 / 64 = 0,7656
+		</p>
+		<p>
+			Analogamente, para as classes “b” e “c”, temos:
+		</p>
+		<p>
+			<span class="small-caps">Pr</span>(“b”) = <span class="small-caps">TP</span><sub>b</sub> / (<span class="small-caps">TP</span><sub>b</sub> + <span class="small-caps">FP</span><sub>c</sub>) = 315 / (315 + 14 + 0) = 315 / 329 = 0,9574
+		</p>
+		<p>
+			<span class="small-caps">Pr</span>(“c”) = <span class="small-caps">TP</span><sub>c</sub> / (<span class="small-caps">TP</span><sub>c</sub> + <span class="small-caps">FP<sub>c</sub>) = 77 / (77 + 7 + 0) = 77 / 84 = 0,9167
+		</p>
+		<p>
+			Veja que a classe “a” tem um valor de precisão bem menor que o das outras duas classes. 
+			Observando a matriz, podemos notar que realmente esta é a classe com a maior proporção de falsos positivos. 
+		</p>
+		<p>
+			Agora que temos a Precisão de cada classe, precisamos arrumar um jeito de computar um valor que represente 
+			a Precisão do classificador. Para tal, basta calcular a média dos 3 valores. Esse cálculo pode ser feito 
+			usando a abordagem macro ou a abordagem micro.
+		</p>
+		<p>
+			<span class="small-caps">Pr</span><sub>macro</sub> = somar os 3 valores e dividir por 3 = (0,7656 + 0,9574 + 0,9167) / 3 = 0,8799
+		</p>
+		<p>
+			<span class="small-caps">Pr</span><sub>micro</sub> = soma ponderada dos 3 valores, dividido pelo total de registros da base de dados de teste. 
+			Ou seja, para cada classe <i>k</i> eu pego a <i><span class="small-caps">Pr</span><sub>k</sub></i> e multiplico pelo número de registros da classe <i>k</i> na base de 
+			dados de teste (total das linhas da Tabela 8).  
+		</p>
+		<p>
+			<span class="small-caps">Pr</span><sub>micro</sub> = (0,7656 * 70 + 0,9574 * 322 + 0,9167 * 85) / 477 = 0,9220
+		</p>
+		<p>
+			<strong>Revocação (Re)</strong> a revocação ou <i>recall</i> da classe c<sub>k</sub> mede a porcentagem de exemplos positivos reais que 
+			foram classificados como positivos.
+		</p>
+
+		<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block">
+			<mrow><mrow><mi mathvariant="normal">Re</mi></mrow><mo>⁡</mo><mrow><mfenced separators="|"><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfenced></mrow></mrow><mo>=</mo><mfrac><mrow><msub><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow><mrow><msub><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>+</mo><mi> </mi><msub><mrow><mi>F</mi><mi>N</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfrac><mi> </mi></math>
+
+		<p>
+			Mais uma vez, vamos começar pela classe “a”. Considerando a <span class="small-caps">MC</span> da Tabela 8, os <span class="small-caps">FNs</span> 
+			(<i>False Negatives</i> ou falsos negativos) são os objetos cuja classe real é “a”, mas que o classificador 
+			equivocadamente classificou como “b” ou “c” durante o processo de teste. Esses objetos podem ser achados 
+			na 1a linha da matriz, nas colunas 2 e 3 (linhas referentes às classes preditas como “b” e “c”). Ou seja, 
+			o denominador é o total da linha “a”.
+		</p>
+		<p>
+			Tendo identificado os <span class="small-caps">TPs</span> e <span class="small-caps">FNs</span>, o cálculo de <span class="small-caps">Re</span>(“a”) é trivial. Basta fazer:
+		</p>
+		<p>
+			<span class="small-caps">Re</span>(“a”) = <span class="small-caps">TP</span><sub>a</sub> / (<span class="small-caps">TP</span><sub>a</sub> + <span class="small-caps">FN</span><sub>a</sub>) = 49 / (49 + 14 + 7) = 49 / 70 = 0,7000
+		</p>
+		<p>
+			Analogamente, para as classes “b” e “c”, temos:
+		</p>
+		<p>
+			<span class="small-caps">Re</span>(“b”) = <span class="small-caps">TP</span><sub>b</sub> / (<span class="small-caps">TP</span><sub>b</sub> + <span class="small-caps">FN</span><sub>c</sub>) = 315 / (315 + 7+ 0) = 315 / 322 = 0,9783
+		</p>
+		<p>
+			<span class="small-caps">Re</span>(“c”) = <span class="small-caps">TP</span><sub>c</sub> / (<span class="small-caps">TP</span><sub>c</sub> + <span class="small-caps">FN</span><sub>c</sub>) = 77 / (77 + 8 + 0) = 77 / 85 = 0,9059
+		</p>
+		<p>
+			Podemos então usar a abordagem macro ou micro para obter o Recall do classificador:
+		</p>
+		<p>
+			<span class="small-caps">Re</span><sub>macro</sub> = (0,7000 + 0,9783 + 0,9059) / 3 = 0,8614
+		</p>
+		<p>
+			<span class="small-caps">Re</span><sub>micro</sub> = (0,7000 * 70 + 0,9783 * 322 + 0,9059 * 85) / 477 = 0,9246
+		</p>
+		<p>
+			<strong>Medida F1 (<i>F1</i>)</strong> trata-se da média harmônica entre a Precisão e a Revocação. É útil, pois na maior parte das 
+			situações práticas um classificador costuma ter um bom desempenho em uma das medidas, mas ruim na outra 
+			(não foi o caso de nosso exemplo, onde a <span class="small-caps">MC</span> ficou muito boa e, por isso, os valores de todas as medidas 
+			ficaram altos). 
+		</p>
+
+		<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mi mathvariant="normal">F</mi><mn>1</mn></mrow><mo>⁡</mo><mrow><mfenced separators="|"><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfenced></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mi> </mi><mo>×</mo><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi><mo>(</mo><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>)</mo><mo>×</mo><mi mathvariant="normal">R</mi><mi mathvariant="normal">e</mi><mo>(</mo><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>)</mo></mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi><mfenced separators="|"><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mfenced><mo>+</mo><mi mathvariant="normal">R</mi><mi mathvariant="normal">e</mi><mo>(</mo><msub><mrow><mi>c</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>)</mo></mrow></mfrac></math>
+	
+		<p>
+			Também calculamos a F1 por classe e depois tiramos a média macro ou micro. Sendo assim, abaixo estamos 
+			apresentando apenas o exemplo do cálculo de F1 para a classe “a”:
+		</p>
+		<p>
+			<span class="small-caps">F1</span>(“a”) = 2 x <span class="small-caps">Pr</span>(“a”) x <span class="small-caps">Re</span>(“a”) / (<span class="small-caps">Pr</span>(“a”) + <span class="small-caps">Re</span>(“a”)) = 2 x 0,7656 x 0,7000 / (0,7656 + 0,7000) = 0,7313
+		</p>
+	</section>
+	
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<h2>Caso Especial – Classificação Binária</h2>
+		<p>
+			Provavelmente, o maior número de problemas práticos de classificação é binário. Por exemplo, considerando 
+			o <span class="small-caps">IBGE</span>, um problema real deste tipo seria a identificação de fraudes em questionário 
+			(classes {“Sim”, “Não”}, onde “Sim” significa questionário fraudulento e “Não” questionário legítimo).
+		</p>
+		<p>
+			Como o problema binário é muito comum, o jeito mais usado pelas ferramentas de ciência de dados para 
+			calcular as medidas neste tipo de problema é considerar (arbitrariamente) uma das classes como “positiva” 
+			e outra como “negativa”. No exemplo da Tabela 9 (hipotético), temos duas classes “C1” e “C2”, onde “C1” 
+			foi considerada a classe “positiva” e “C2” a “negativa” pela ferramenta de ciência de dados.
+		</p>
+	</section>
+		
+	
+		<!-- Tabela [inicio] -->
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+				<div class="table-container">
+					<table class="table tabletext-table">
+						<caption class="table__title">Tabela 9. Matriz de confusão hipotética em um problema binário (<i>m</i> = 2)</caption>
+					<td></td>
+					<th>C1</th>
+					<th>C2</th>
+				</tr>
+				<tr>
+					<th>C1</th>
+					<td>318 (TP)</td>
+					<td>6 (FN)</td>
+				</tr>
+				<tr>
+					<th>C2</th>
+					<td>6 (FP)</td>
+					<td>170 (TN)</td>
+				</tr>
+			</table>
+			</div>
+		</section>
+		<!-- Tabela [FIM] -->
+	
+	
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<p>
+			A partir dessa matriz, se o usuário desejar, é possível calcular a <span class="small-caps">Pr</span>, <span class="small-caps">Re</span> e <span class="small-caps">F1</span> do classificador 
+			diretamente, usando a chamada “abordagem binária”. Veja o exemplo a seguir, onde realiza-se o cálculo 
+			da precisão:
+		</p>
+		<p>
+			<span class="small-caps">Pr</span> = <span class="small-caps">TP</span> / (<span class="small-caps">TP</span> + <span class="small-caps">FP</span>) = 318 / (318 + 6) = 0,9815
+		</p>
+	</section>
+
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<h2>Problemas com Classes Desbalanceadas</h2>
+		<p>
+			Os exemplos das Tabelas 8 e 9 apresentaram matrizes de confusão onde o desempenho preditivo para todos os 
+			rótulos de classe foi muito bom. Porém, não é isso que ocorre sempre na prática, especialmente em problemas 
+			onde as classes são <strong>desbalanceadas</strong>, isto é, quando o classificador foi treinado com uma base em que havia 
+			predominância de objetos de uma determinada classe. Nesta situação, o classificador tende a apresentar maior 
+			eficácia para os objetos da classe majoritária e, muitas vezes, apresenta um desempenho ruim para os objetos 
+			da(s) classe(s) minoritária(s).
+		</p>
+		<p>
+			Por exemplo, considere o problema de identificar fraudes em questionários. Neste caso, é comum que a base 
+			rotulada possua muito mais objetos da classe “Não” (questionário legítimo) do que da classe “Sim” 
+			(questionário fraudulento). Então, quando ela for dividida nas partições de treino e teste, a partição de 
+			treino ficará naturalmente com mais objetos da classe “Não” do que da classe “Sim”. Tipicamente, o 
+			classificador aprenderá classificar melhor os objetos “Não” do que os objetos “Sim”, já que ele foi 
+			apresentado a mais exemplos de objetos da classe “Não”. 
+		</p>
+		<p>
+			Por exemplo, a <span class="small-caps">MC</span> da Tabela 10, poderia ser uma MC gerada após o teste do classificador de fraudes em 
+			questionários. Veja que para a classe majoritária (“Não”), o classificador acertou 35033 classificações e 
+			errou 2122, obtendo acurácia de 0,94 (ou 94%). Porém, na classe minoritária (“Sim”), o classificador teve 
+			um desempenho bem pior, acertando 7009 classificações e errando 4678, ou seja, a acurácia para essa classe 
+			específica é 0,6 (ou 60%). Isso pode representar um problema em um bom número de aplicações, onde deseja-se
+			 um desempenho parecido para a classificação de qualquer rótulo. Para conhecer algumas técnicas básicas 
+			 para o tratamento de bases de dados com classes desbalanceadas, consulte 
+			 <a href="https://tatianaesc.medium.com/trabalhando-com-classes-desbalanceadas-em-problemas-machine-learning-29ee8db4a049">
+			 https://tatianaesc.medium.com/trabalhando-com-classes-desbalanceadas-em-problemas-machine-learning-29ee8db4a049
+			 </a>
+		</p>
+	</section>
+
+	<!-- Tabela [inicio] -->
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+				<div class="table-container">
+					<table class="table tabletext-table">
+						<caption class="table__title">Tabela 9. Matriz de confusão hipotética em um problema binário (<i>m</i> = 2)</caption>
+					<td></td>
+					<th>Sim</th>
+					<th>Não</th>
+				</tr>
+				<tr>
+					<th>Sim</th>
+					<td>7009</td>
+					<td>4678</td>
+				</tr>
+				<tr>
+					<th>Não</th>
+					<td>2122</td>
+					<td>35033</td>
+				</tr>
+			</table>
+			</div>
+		</section>
+		<!-- Tabela [FIM] -->
+
+		<!-- Destaque [inicio] -->
+	<section class="feature feature--example">
+		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+			<p>
+				Há diversas outras medidas de desempenho preditivo para classificadores. Para uma referência completa 
+				não apenas sobre essas medidas, mas sobre outros assuntos relacionados à avaliação e classificadores, 
+				consulte a apresentação disponibilizada em: 
+				<a href="https://www.site.uottawa.ca/~nat/Talks/CanadianAI-Tutorial.pptx">
+				https://www.site.uottawa.ca/~nat/Talks/CanadianAI-Tutorial.pptx
+				</a>
+			</p>
+		</div>
+	</section>
+	<!-- Destaque [fim] -->
+	
+	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
+		<!-- Tabela [inicio] -->
 			<div class="table-container">
 				<table class="table">
 					<caption class="table__title">Base com os dados de endividamento de casais jovens.</caption>
