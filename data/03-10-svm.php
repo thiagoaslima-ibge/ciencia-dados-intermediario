@@ -128,7 +128,7 @@ include "head.php";
 			<h2>Etapa de Treinamento</h2>
 			<p>
 				O princípio para treinar um classificador <span class="small-caps">SVM</span> será explicado com o uso da base de dados da Tabela 7. Ela contém dois 
-				atributos preditivos, X<sub>1</sub> e X<sub>2</sub>, e um atributo classe Y ∈  {-1, 1} – o <span class="small-caps">SVM</span> adota essa notação em vez de {0, 1}. 
+				atributos preditivos, X<sub>1</sub> e X<sub>2</sub>, e um atributo classe <span class="code-inline">Y ∈  {-1, 1}</span> – o <span class="small-caps">SVM</span> adota essa notação em vez de {0, 1}. 
 				Veja que há 4 objetos com o rótulo de classe 1 e que há outros 5 da classe -1
 			</p>
 		
@@ -369,8 +369,8 @@ include "head.php";
 				é uma equação que define a <span class="small-caps">MMH</span> e é baseada na formulação Lagrangiana:
 			</p>
 			
-			<!-- Não sei como passar para o html -->
-			<p>d(z)=∑_(i=1)^l▒〖yi×αi×xi×t+bo〗</p>
+			<math xmlns:mml="http://www.w3.org/1998/Math/MathML" display="block"><mi>d</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><mrow><msubsup><mo stretchy="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>l</mi></mrow></msubsup><mrow><mi>y</mi><mi>i</mi><mo>×</mo><mi>α</mi><mi>i</mi><mo>×</mo><mi>x</mi><mi>i</mi><mo>×</mo><mi>t</mi><mo>+</mo><mi>b</mi><mi>o</mi></mrow></mrow></math>
+
 			<p>
 				É a partir dessa fórmula que podemos classificar novos objetos. Basicamente, basta “plugar” as 
 				informações de um novo objeto (representado na fórmula por <i>t</i>). Se o resultado for positivo, o 
