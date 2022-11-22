@@ -27,6 +27,10 @@ include "head.php";
 		color: transparent;
 		background-color: rgba(135, 100, 205, 0.5);
 	}
+
+	.lower-alpha-counter > li::before {
+    content: counter(numlist, lower-alpha) '. ';
+  }
 </style>
 
 <main class="page-content okgo">
@@ -74,20 +78,20 @@ include "head.php";
 		>
 			<picture>
 			<source
-				srcset="dist/img/image20.png"
+				srcset="dist/img/unidade-03/image20.png"
 				media="(min-width:1200px)"
 			/>
 			<source
-				srcset="dist/img/image20.png"
+				srcset="dist/img/unidade-03/image20.png"
 				media="(min-width:600px)"
 			/>
 			<source
-				srcset="dist/img/image20.png"
+				srcset="dist/img/unidade-03/image20.png"
 				media="(min-width:1px)"
 			/>
 			<img
 				class="image"
-				src="dist/img/image20.png"
+				src="dist/img/unidade-03/image20.png"
 				alt="Exemplo de diagrama de Rede Neural com 2 camadas.."
 			/>
 			</picture>
@@ -109,9 +113,9 @@ include "head.php";
 
 		<div class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<ol class="numeric-list">
-				<li>Função de ativação:  que transforma a conexão de um neurônio da rede de entrada para ser transmitido adiante.</li>
-				<li>Topologia de rede: que descreve o número de neurônios no modelo, bem como o número de camadas e a maneira como eles estão conectados.</li>
-				<li>O algoritmo de treinamento: que especifica como os pesos das conexões são calculados</li>
+				<li><strong>Função de ativação</strong>: que transforma a conexão de um neurônio da rede de entrada para ser transmitido adiante.</li>
+				<li><strong>Topologia de rede</strong>: que descreve o número de neurônios no modelo, bem como o número de camadas e a maneira como eles estão conectados.</li>
+				<li><strong>O algoritmo de treinamento</strong>: que especifica como os pesos das conexões são calculados</li>
 			</ol>
 		</div>
 		
@@ -128,7 +132,7 @@ include "head.php";
 				saída podem ser qualquer valor no intervalo de 0 a 1. Ainda existem várias outras opções de funções 
 				de ativação, tais como: linear, tangente hiperbólica, gaussiana, etc. Uma função de ativação linear 
 				resulta em uma rede neural muito semelhante a um modelo de regressão linear, enquanto uma função de 
-				ativação gaussiana resulta em um modelo chamado de rede Radial Basis Function ( <span class="small-caps">RBF</span>).
+				ativação gaussiana resulta em um modelo chamado de rede Radial Basis Function (<span class="small-caps">RBF</span>).
 			</p>
 		</section>
 			
@@ -141,11 +145,6 @@ include "head.php";
 		</section>
 		
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-	<style>
-		.lower-alpha-counter>li::before {
-			content: counter(numlist, lower-alpha) '. ';
-		}
-		</style>
 
 		<ol class="numeric-list lower-alpha-counter">
 		<li>O número de camadas</li>
@@ -155,7 +154,7 @@ include "head.php";
 	</section>
 	
 	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-			<h2>2.a) Número de Camadas</h2>
+			<h3>2.a. Número de Camadas</h3>
 			<p>
 				Nós vimos na Figura 16 uma rede muito simples, com apenas duas camadas. Os sinais resultantes dos nós de 
 				entrada são recebidos pelo nó de saída, que usa sua própria função de ativação para gerar uma previsão 
@@ -179,20 +178,20 @@ include "head.php";
 		>
 			<picture>
 			<source
-				srcset="dist/img/image21.png"
+				srcset="dist/img/unidade-03/image21.png"
 				media="(min-width:1200px)"
 			/>
 			<source
-				srcset="dist/img/image21.png"
+				srcset="dist/img/unidade-03/image21.png"
 				media="(min-width:600px)"
 			/>
 			<source
-				srcset="dist/img/image21.png"
+				srcset="dist/img/unidade-03/image21.png"
 				media="(min-width:1px)"
 			/>
 			<img
 				class="image"
-				src="dist/img/image21.png"
+				src="dist/img/unidade-03/image21.png"
 				alt="Exemplo de Rede com 3 camadas: Entrada, Oculta, Saída"
 			/>
 			</picture>
@@ -215,7 +214,7 @@ include "head.php";
 	</section>
 
 	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-		<h2>2.b) O número de nós em cada camada</h2>
+		<h3>2.b. O número de nós em cada camada</h3>
 		<p>
 			O número de nós da camada de entrada é predeterminado pelo número de atributos nos dados de entrada. 
 			Em geral, é dado pela quantidade de variáveis X de interesse. Da mesma forma, o número de nós da camada de 
@@ -233,7 +232,7 @@ include "head.php";
 	</section>
 
 	<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
-		<h2>2.c) A direção do caminho da informação</h2>
+		<h3>2.c. A direção do caminho da informação</h3>
 		<p>
 			Você deve ter notado que nos exemplos anteriores as pontas das setas foram usadas para indicar a direção 
 			para onde os sinais são enviados. Redes nas quais o sinal de entrada é alimentado continuamente em uma 

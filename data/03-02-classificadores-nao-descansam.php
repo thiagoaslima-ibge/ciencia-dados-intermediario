@@ -1,12 +1,12 @@
 <?php
 // Titulo da unidade
-$moduleTitle = "";
+$moduleTitle ="";
 // Titulo do topico
-$topicTitle = "O processo de classificação de dados";
+$topicTitle ="O processo de classificação de dados";
 // Titulo da pagina
-$pageTitle = "Classificadores não descansam";
+$pageTitle ="Classificadores não descansam";
 // Subtitulo da pagina
-$pageSubtitle = "Uso cotidiano e uso institucional";
+$pageSubtitle ="Uso cotidiano e uso institucional";
 // Inclusao do cabeçalho do curso	
 include "head.php";
 ?>

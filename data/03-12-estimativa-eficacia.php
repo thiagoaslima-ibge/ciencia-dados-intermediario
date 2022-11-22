@@ -101,7 +101,7 @@ include "head.php";
 			<img
 				class="image"
 				src="dist/img/image21.png"
-				alt="Partições geradas pelo método holdout. "
+				alt="Partições geradas pelo método holdout."
 			/>
 			</picture>
 		</div>

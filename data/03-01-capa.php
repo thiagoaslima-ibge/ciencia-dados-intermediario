@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="pt-br" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="pt-br" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="pt-br" dir="ltr" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="pt-br" dir="ltr" class="no-js cover"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="pt-br" dir="ltr" class="no-js cover curso-tecnologia lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="pt-br" dir="ltr" class="no-js cover curso-tecnologia lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="pt-br" dir="ltr" class="no-js cover curso-tecnologia lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="pt-br" dir="ltr" class="no-js cover curso-tecnologia"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 	</head>
 
 	<body class="cover--example" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
-	<!-- <body class="cover--example curso-tecnologia" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
+	<!-- <body class="cover--example" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
 		<!--[if lt IE 7]>
 			<p class="obsoletebrowser">Você está usando um navegador de internet obsoleto. Por favor atualize para uma melhor experiência.</p>
 		<![endif]-->

@@ -1,6 +1,6 @@
 var environment = "dev"; // prd=producao, dev=desenvolvimento.
 var paginas = [
-	{arquivo:"03-01-capa.php", titulo:"Capa", nvl1: 'Métodos de classificação'},
+	{arquivo:"03-01-capa.php", titulo:"Capa"},
 	{arquivo:"03-02-classificadores-nao-descansam.php", titulo:"Classificadores não descansam", nvl1: "O processo de classificação de dados"},
 	{arquivo:"03-03-receitas-ingredientes.php", titulo:"Receitas dos classificadores: ingredientes", nvl1: "O processo de classificação de dados"},
 	{arquivo:"03-04-receitas-modo-de-fazer.php", titulo:"Receitas dos classificadores: modo de fazer", nvl1: "O processo de classificação de dados"},

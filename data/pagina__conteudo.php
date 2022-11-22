@@ -181,7 +181,7 @@
 				<source src="src/video/video-sample.mp4" type="video/mp4" srclang="pt">
 				<track src="http://10.200.0.78/pnadc2015/Acesso_a_Servicos_Basicos_Conceitos.vtt" kind="captions" label="Portugues" srclang="pt">
 				<p>Seu navegador <strong>não é compatível</strong> com este recurso. Caso esteja usando o Internet Explorer, <strong>desabilite o Modo de exibição de Compatibilidade para este site</strong>.</p>
-				<p>Você também pode <a href="http://10.200.0.78/pnadc2015/Acesso_a_Servicos_Basicos_Conceitos.flv" title="Selecione para fazer o download.">fazer o download do vídeo</a> e reproduzi-lo localmente (clique com o botão direito sobre o link e selecione a opção "Salvar Como...").</p>
+				<p>Você também pode <a href="http://10.200.0.78/pnadc2015/Acesso_a_Servicos_Basicos_Conceitos.flv" title="Selecione para fazer o download.">fazer o download do vídeo</a> e reproduzi-lo localmente (clique com o botão direito sobre o link e selecione a opção “Salvar Como...”).</p>
 			</video>
 			<!-- Video incorporado [fim] -->
 							
