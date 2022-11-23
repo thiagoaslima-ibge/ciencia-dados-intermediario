@@ -47,22 +47,19 @@ include "head.php";
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<p>Grande parte dos algoritmos de classificação propostos na literatura baseia-se na construção de <strong>modelos caixa-preta</strong>. Isto é: modelos projetados para maximizar o desempenho preditivo (acurácia) do classificador, mas que não explicam suas previsões de uma maneira que os humanos possam entender.</p>
 			<p>No entanto, para as instituições governamentais, por questões legais, éticas e de transparência, oferecer ferramentas para que usuários possam interpretar as classificações produzidas por um modelo costuma representar algo tão importante quanto a própria acurácia do modelo. Em outras palavras, grande parte dos problemas no âmbito da administração pública requer a utilização de <strong>modelos de classificação interpretáveis</strong>. Um classificador interpretável possui a habilidade de “explicar” as suas classificações para os usuários através, por exemplo, da apresentação de regras de classificação no formato: <span class="code-inline">SE &lt;condição&gt; ENTÃO &lt;rótulo(s) de classe&gt;</span>.</p>
-			<p>No campo da ciência de dados, a técnica de árvore de decisão (AD) é a mais conhecida e utilizada para o aprendizado de classificadores interpretáveis. Isto é justificado pelo fato de as ADs possuírem uma estrutura gráfica e intuitiva, que representa um conjunto de regras de classificação e é semelhante a um fluxograma, tornando natural a interpretação do modelo de classificação. A Figura 4 mostra um exemplo baseado em uma AD real, extraída a partir de dados da Pesquisa Mensal de Empregos, que classifica o tipo de ocupação de trabalhadores analfabetos como “trabalhador doméstico” em função de seu sexo e idade. Esta árvore revela que, de acordo com a base de dados da PME, mulheres acima dos 60 anos <em>têm maior chance</em> de exercer trabalho doméstico, ao contrário das mulheres abaixo dessa idade e dos homens.</p>
+			<p>No campo da ciência de dados, a técnica de árvore de decisão (AD) é a mais conhecida e utilizada para o aprendizado de classificadores interpretáveis. Isto é justificado pelo fato de as ADs possuírem uma estrutura gráfica e intuitiva, que representa um conjunto de regras de classificação e é semelhante a um fluxograma, tornando natural a interpretação do modelo de classificação. A Figura 3 mostra um exemplo baseado em uma AD real, extraída a partir de dados da Pesquisa Mensal de Empregos, que classifica o tipo de ocupação de trabalhadores analfabetos como “trabalhador doméstico” em função de seu sexo e idade. Esta árvore revela que, de acordo com a base de dados da PME, mulheres acima dos 60 anos <em>têm maior chance</em> de exercer trabalho doméstico, ao contrário das mulheres abaixo dessa idade e dos homens.</p>
 		</section>
 
 		<!-- Imagem média [inicio] -->
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image4.png" media="(min-width:1200px)">
-					<source srcset="dist/img/unidade-03/image4.png" media="(min-width:600px)">
-					<source srcset="dist/img/unidade-03/image4.png" media="(min-width:1px)">
-					<img class="image" src="dist/img/unidade-03/image4.png" alt="Descrição da imagem.">
+					<img class="image" src="dist/img/un03/figura03.svg" alt="Descrição da imagem.">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 4: Árvore de decisão que classifica trabalhadores analfabetos como pessoa que executa serviço doméstico ou não.
+				Figura 3: Árvore de decisão que classifica trabalhadores analfabetos como pessoa que executa serviço doméstico ou não.
 			</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -73,14 +70,14 @@ include "head.php";
 			<!-- Lista não ordenada [inicio] -->
 			<ul class="bulleted-list">
 				<li>É desenhada com a raiz no topo e as folhas na parte inferior. Sendo assim, a raiz dessa árvore é o atributo “Sexo”.</li>
-				<li>Cada nó interno (representado como um retângulo na Figura 4) consiste em um teste sobre um atributo preditivo (neste caso, os atributos “Sexo” e “Idade”).</li>
+				<li>Cada nó interno (representado como um retângulo na Figura 3) consiste em um teste sobre um atributo preditivo (neste caso, os atributos “Sexo” e “Idade”).</li>
 				<li>Uma ramificação, partindo de um nó interno, representa um resultado para o teste (por exemplo, Idade ≤ 60) </li>
 				<li>Cada nó folha representa um rótulo de classe (neste exemplo, Trabalhador Doméstico = “Sim” ou Trabalhador Doméstico = “Não”). </li>
 				<li>Um novo objeto é classificado seguindo um caminho na árvore, do nó raiz até um nó folha. </li>
 			</ul>
 			<!-- Lista não ordenada [fim] -->
 
-			<p>Uma AD é formada por um conjunto de regras de classificação, uma vez que existe sempre um único caminho da raiz para cada folha e este caminho representa uma expressão da regra utilizada para classificar um objeto. Folhas diferentes podem produzir a mesma classificação, mas cada uma por uma razão diferente (pois cada caminho representa uma regra diferente). Por exemplo, a AD da Figura 4 é composta por três regras:</p>
+			<p>Uma AD é formada por um conjunto de regras de classificação, uma vez que existe sempre um único caminho da raiz para cada folha e este caminho representa uma expressão da regra utilizada para classificar um objeto. Folhas diferentes podem produzir a mesma classificação, mas cada uma por uma razão diferente (pois cada caminho representa uma regra diferente). Por exemplo, a AD da Figura 3 é composta por três regras:</p>
 
 			<!-- Lista não ordenada [inicio] -->
 			<ul class="bulleted-list">
@@ -100,25 +97,24 @@ include "head.php";
 			<h2>Etapa de treinamento</h2>
 
 			<p>Uma AD é composta por uma série de questões. A resposta da primeira questão determina a questão seguinte, e assim sucessivamente até que um nó folha seja alcançado. Caso as questões sejam bem formuladas (na melhor ordem possível), um pequeno número delas poderá ser suficiente para classificar corretamente um objeto.</p>
-			<p>Portanto, um aspecto fundamental para a construção de uma AD consiste na estratégia para a escolha dos atributos preditivos que estarão mais próximos da raiz da árvore (ou seja, os atributos que são inicialmente avaliados para determinar a classe à qual um objeto pertence). Uma <strong>medida de seleção de atributos</strong> (também chamada de medida de diversidade) é utilizada durante a construção da árvore para produzir um ranking de atributos preditivos. O atributo com melhor escore no ranking é aquele que consegue realizar o melhor trabalho de produzir nós mais puros (nós que separem os objetos da base de treino em grupos onde um único rótulo de classe predomine). Em outras palavras, é o atributo que diminui ao máximo a diversidade dos objetos de treino. Os conceitos de impureza e pureza são exemplificados na Figura 5. Neste exemplo, considere um BD com 18 observações cujo atributo classe possui dois rótulos: “S” ou “N”. No lado esquerdo da figura, temos um exemplo de divisão impura, em que não há predominância de nenhum rótulo classe nas partições produzidas. Já no lado direito, temos um exemplo de divisão que gera partições puras, ou seja, partições em que há predominância de um rótulo de classe.</p>
+			<p>Portanto, um aspecto fundamental para a construção de uma AD consiste na estratégia para a escolha dos atributos preditivos que estarão mais próximos da raiz da árvore (ou seja, os atributos que são inicialmente avaliados para determinar a classe à qual um objeto pertence). Uma <strong>medida de seleção de atributos</strong> (também chamada de medida de diversidade) é utilizada durante a construção da árvore para produzir um ranking de atributos preditivos. O atributo com melhor escore no ranking é aquele que consegue realizar o melhor trabalho de produzir nós mais puros (nós que separem os objetos da base de treino em grupos onde um único rótulo de classe predomine). Em outras palavras, é o atributo que diminui ao máximo a diversidade dos objetos de treino. Os conceitos de impureza e pureza são exemplificados na Figura 4. Neste exemplo, considere um BD com 18 observações cujo atributo classe possui dois rótulos: “S” ou “N”. No lado esquerdo da figura, temos um exemplo de divisão impura, em que não há predominância de nenhum rótulo classe nas partições produzidas. Já no lado direito, temos um exemplo de divisão que gera partições puras, ou seja, partições em que há predominância de um rótulo de classe.</p>
+		</section>
 
-			<!-- Imagem média [inicio] -->
-			<figure class="img-container">
-				<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
-					<picture>
-						<source srcset="dist/img/unidade-03/image5.png" media="(min-width:1200px)">
-						<source srcset="dist/img/unidade-03/image5.png" media="(min-width:600px)">
-						<source srcset="dist/img/unidade-03/image5.png" media="(min-width:1px)">
-						<img class="image" src="dist/img/unidade-03/image5.png" alt="Descrição da imagem.">
-					</picture>
-				</div>
-				<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
-					<div class="img-container__top-line"></div>
-					Figura 5: Partições impuras versus partições puras
-				</figcaption>
-			</figure>
-			<!-- Imagem média [fim] -->
+		<!-- Imagem média [inicio] -->
+		<figure class="img-container">
+			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
+				<picture>
+					<img class="image" src="dist/img/un03/figura04.svg" alt="Descrição da imagem.">
+				</picture>
+			</div>
+			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
+				<div class="img-container__top-line"></div>
+				Figura 4: Partições impuras versus partições puras
+			</figcaption>
+		</figure>
+		<!-- Imagem média [fim] -->
 
+		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<p>O algoritmo CART utiliza o índice de Gini para computar a impureza das partições geradas por um atributo. A fórmula é apresentada a seguir. Considere que <i>m</i> é o número de classes e <i>p<sub>i</sub></i> é a probabilidade de um objeto <i>t</i> pertencer à classe <i>y<sub>i</sub></i> no conjunto de dados <i>D</i>.</p>
 		</section>
 
@@ -158,7 +154,7 @@ include "head.php";
 			<!-- Quadro [inicio] -->
 			<div class="table-container">
 				<table class="table table--text-table">
-					<caption class="table__title">Tabela 6: Base com os dados de trabalhadores analfabetos.</caption>
+					<caption class="table__title">Quadro 3: Base com os dados de trabalhadores analfabetos.</caption>
 					<thead>
 						<tr>
 							<th scope="col">Idade</th>
@@ -240,7 +236,7 @@ include "head.php";
 			<!-- Quadro [fim] -->
 
 			<p>A estratégia básica empregada pelo CART é construir a árvore por etapas, ou seja, nó por nó. A cada etapa, todos os atributos preditivos disponíveis deverão ser avaliados, o que significa que o índice de Gini deverá ser calculado para cada um deles. O atributo que resultar no menor valor será escolhido para fazer parte da árvore, pois ele é o que gera as partições que, em média, são as mais puras. Vamos examinar um exemplo passo a passo para entender como é feito.</p>
-			<p>Na base de dados da Tabela 6, os atributos preditivos são “idade”, “UF” e “sexo” e o atributo classe é “trabalho_doméstico”. Na primeira rodada do CART, haverá a decisão sobre qual dos três atributos preditivos entrará como nó raiz da árvore. A decisão ocorre em função do resultado dos cálculos a seguir:</p>
+			<p>Na base de dados do Quadro 3, os atributos preditivos são “idade”, “UF” e “sexo” e o atributo classe é “trabalho_doméstico”. Na primeira rodada do CART, haverá a decisão sobre qual dos três atributos preditivos entrará como nó raiz da árvore. A decisão ocorre em função do resultado dos cálculos a seguir:</p>
 
 			<h4>Difinindo o nó raiz</h4>
 
@@ -542,7 +538,7 @@ include "head.php";
 			<!-- Quadro [inicio] -->
 			<div class="table-container">
 				<table class="table table--text-table">
-					<caption class="table__title">Tabela 7: Partições definidas pelo atributo “sexo”</caption>
+					<caption class="table__title">Quadro 4: Partições definidas pelo atributo “sexo”</caption>
 					<thead>
 						<tr>
 							<th scope="col">Sexo</th>
@@ -591,22 +587,19 @@ include "head.php";
 			</div>
 			<!-- Quadro [fim] -->
 
-			<p>A árvore de decisão parcial, definida em função dessas partições é apresentada na Figura 7:</p>
+			<p>A árvore de decisão parcial, definida em função dessas partições é apresentada na Figura 5:</p>
 		</section>
 
 		<!-- Imagem pequena [inicio] -->
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-10 col-sm-offset-3 col-md-8 col-md-offset-5 col-lg-6 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:1200px)">
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:600px)">
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:1px)">
-					<img class="image" src="dist/img/unidade-03/image6.png" alt="Descrição da imagem.">
+					<img class="image" src="dist/img/un03/figura05.svg" alt="Descrição da imagem.">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 6: AD parcial gerada após a primeira rodada do CART
+				Figura 5: AD parcial gerada após a primeira rodada do CART
 			</figcaption>
 		</figure>
 		<!-- Imagem pequena [fim] -->
@@ -794,7 +787,7 @@ include "head.php";
 			<!-- Quadro [inicio] -->
 			<div class="table-container">
 				<table class="table table--text-table">
-					<caption class="table__title">Tabela 8: Partições definidas pelo atributo “idade” na partição (sexo = “F”)</caption>
+					<caption class="table__title">Quadro 5: Partições definidas pelo atributo “idade” na partição (sexo = “F”)</caption>
 					<thead>
 						<tr>
 							<th scope="col">Sexo</th>
@@ -808,15 +801,25 @@ include "head.php";
 							<td scope="row" rowspan="3">≤60, SP, Sim</td>
 							<td>≤60, SP, F, Não</td>
 						</tr>
-						<tr><td>≤60, MG, F, Sim</td></tr>
-						<tr><td>≤60, MG, F, Não</td></tr>
+						<tr>
+							<td>≤60, MG, F, Sim</td>
+						</tr>
+						<tr>
+							<td>≤60, MG, F, Não</td>
+						</tr>
 						<tr>
 							<td scope="row" rowspan="4">>60</td>
 							<td>>60, SP, F, Sim</td>
 						</tr>
-						<tr><td>>60, MG, F, Sim</td></tr>
-						<tr><td>>60, MG, F, Sim</td></tr>
-						<tr><td>>60, SP, F, Sim</td></tr>
+						<tr>
+							<td>>60, MG, F, Sim</td>
+						</tr>
+						<tr>
+							<td>>60, MG, F, Sim</td>
+						</tr>
+						<tr>
+							<td>>60, SP, F, Sim</td>
+						</tr>
 
 						<!-- Partições para M -->
 						<!-- 	
@@ -833,32 +836,29 @@ include "head.php";
 			</div>
 			<!-- Quadro [fim] -->
 
-			<p>Veja que agora a partição definida por (sexo = “F” e idade > 60) possui todos os objetos da classe “Sim”. Já a partição (sexo = “F” e idade ≤ 60) possui dois objetos da classe “Não” e um da classe “Sim”. No entanto, ela tem um número muito reduzido de objetos e, em seu modo típico de operação, o CART vai considerar que não vale mais a pena tentar dividi-la. Em vez disso, O CART simplesmente irá definir que esta partição gera um nó folha da classe “Não”, pois essa é a classe majoritária da partição. Assim, o algoritmo encerra o seu processamento gerando a AD mostrada na Figura 9, de acordo com a Figura 4 apresentada anteriormente.</p>
+			<p>Veja que agora a partição definida por (sexo = “F” e idade > 60) possui todos os objetos da classe “Sim”. Já a partição (sexo = “F” e idade ≤ 60) possui dois objetos da classe “Não” e um da classe “Sim”. No entanto, ela tem um número muito reduzido de objetos e, em seu modo típico de operação, o CART vai considerar que não vale mais a pena tentar dividi-la. Em vez disso, O CART simplesmente irá definir que esta partição gera um nó folha da classe “Não”, pois essa é a classe majoritária da partição. Assim, o algoritmo encerra o seu processamento gerando a AD mostrada na Figura 6, de acordo com a Figura 3 apresentada anteriormente.</p>
 		</section>
 
-			<!-- Imagem pequena [inicio] -->
+		<!-- Imagem pequena [inicio] -->
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-10 col-sm-offset-3 col-md-8 col-md-offset-5 col-lg-6 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:1200px)">
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:600px)">
-					<source srcset="dist/img/unidade-03/image6.png" media="(min-width:1px)">
-					<img class="image" src="dist/img/unidade-03/image6.png" alt="Descrição da imagem.">
+					<img class="image" src="dist/img/un03/figura06.svg" alt="Descrição da imagem.">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 9: AD final gerada pelo CART
+				Figura 6: AD final gerada pelo CART
 			</figcaption>
 		</figure>
 		<!-- Imagem pequena [fim] -->
-			
+
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<h2>Etapa de Classificação</h2>
 
 			<p>Uma vez que a AD tenha sido gerada, classificar um novo objeto é trivial: basta seguir um caminho da raiz até um nó folha de acordo com as características do objeto. Por exemplo, considere o <span class="code-inline">novoObj = (sexo=”F”, idade > 60)</span>. De acordo com a AD gerada, o objeto deve ser classificado como “Sim”, independente da variável UF do objeto, pois essa variável não foi considerada pelo modelo criado.</p>
 		</section>
-		
+
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<h2>Discussão</h2>
 
@@ -879,21 +879,21 @@ include "head.php";
 			<p>E se houvesse atributos preditivos contínuos? Neste caso, supondo um atributo contínuo <i>A</i>, o CART tentará encontrar o melhor ponto de divisão ordenando os valores de <i>A</i> de maneira ascendente e depois testando todas as possibilidades considerando os pontos médios entre cada par de valor. Ou seja: se existem <i>v</i> valores distintos, então <i>v-1</i> possíveis divisões serão consideradas. Por exemplo, suponha um atributo salário que apareça com os quatro seguintes valores distintos na base 1.500, 2.000, 4.000 e 10.000. Neste caso, o CART avaliaria três possíveis divisões:</p>
 
 			<math mode="display">
-				<mtext>(≤ 1.750) : (> 1.750)</mtext> 
+				<mtext>(≤ 1.750) : (> 1.750)</mtext>
 				<mtext>&ensp;&ndash;&ensp;</mtext>
 				<mtext mathvariant="italic">1.750 é o ponto médio entre 1.500 e 2.000&nbsp;</mtext>
 			</math>
 			<math mode="display">
-				<mtext>(≤ 3.000) : (> 3.000)</mtext> 
+				<mtext>(≤ 3.000) : (> 3.000)</mtext>
 				<mtext>&ensp;&ndash;&ensp;</mtext>
 				<mtext mathvariant="italic">3.000 é o ponto médio entre 2.000 e 4.000&nbsp;</mtext>
 			</math>
 			<math mode="display">
-				<mtext>(≤ 7.000) : (> 7.000)</mtext> 
+				<mtext>(≤ 7.000) : (> 7.000)</mtext>
 				<mtext>&ensp;&ndash;&ensp;</mtext>
 				<mtext mathvariant="italic">7.000 é o ponto médio entre 4.000 e 10.000</mtext>
 			</math>
-			
+
 			<p>No exemplo apresentado na Figura 8, o CART encerrou o seu processamento quando ocorreu uma situação em que uma das partições ainda não processada possuía um número pequeno de observações (apenas 3 observações). Na prática, a maioria das ferramentas de ciência de dados permite que o usuário configure este número mínimo de observações que leva ao fim do processamento. Outro critério de parada que pode ser definido para o CART é a profundidade (número de níveis) máxima da árvore.</p>
 			<p>Quando uma árvore é construída, muitos ramos podem refletir sujeira ou terem sido criados sob influência de <i>outliers</i>. O CART pode utilizar uma técnica de poda com o intuito de identificar e remover estes ramos. As árvores podadas tendem a ser menores e menos complexas, portanto, mais fáceis de serem compreendidas pelos usuários de uma ferramenta de ciência de dados. Na maioria das vezes também são mais eficazes para a classificação de novos casos. Uma breve introdução ao tema é apresentada em <a href="https://www.youtube.com/watch?v=u4kbPtiVVB8&t=7s">https://www.youtube.com/watch?v=u4kbPtiVVB8&t=7s</a>.</p>
 			<p>Por fim, vamos aos pontos positivos e negativos da técnica de AD. Um primeiro ponto positivo é a eficiência, ou seja, usando o CART ou qualquer outro algoritmo de AD podemos gerar o modelo de classificação em um tempo computacional baixo. No entanto, muito mais importante que isso e o que podemos considerar como principal aspecto positivo é o fato de uma AD ser um modelo interpretável, o que constitui requisito necessário em muitas aplicações relacionadas ao serviço público. Por outro lado, a principal desvantagem é que nem sempre um algoritmo de AD consegue produzir um modelo com desempenho preditivo similar ao de métodos mais sofisticados, como Random Forest e Redes Neurais.</p>
@@ -903,172 +903,173 @@ include "head.php";
 					<img src="dist/img/written-process-icon.svg" aria-hidden="true" />
 				</div>
 				<p class="pullquote">
-				Dado o BD abaixo, calcule o índice de Gini para os atributos preditivos “Idade” e “Renda”
+					Dado o BD abaixo, calcule o índice de Gini para os atributos preditivos “Idade” e “Renda”
 				</p>
 			</div>
-		</section>
 
 		<!-- Quadro [inicio] -->
 		<div class="table-container">
-				<table class="table table--text-table">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col">Idade</th>
-							<th scope="col">Renda</th>
-							<th scope="col">classe</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>[1]</td>
-							<td>&le;40</td>
-							<td>&le8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[2]</td>
-							<td>&le;40</td>
-							<td>&le8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[3]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[4]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[5]</td>
-							<td>&le;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[6]</td>
-							<td>&le;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[7]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[8]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[9]</td>
-							<td>&le;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[10]</td>
-							<td>&le;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[11]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[12]</td>
-							<td>&le;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[13]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[14]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[15]</td>
-							<td>&gt;40</td>
-							<td>&gt;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[16]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[17]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[18]</td>
-							<td>&gt;40</td>
-							<td>&gt;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[19]</td>
-							<td>&gt;40</td>
-							<td>&gt;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[20]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[21]</td>
-							<td>&gt;40</td>
-							<td>&gt;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[22]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>N</td>
-						</tr>
-						<tr>
-							<td>[23]</td>
-							<td>&gt;40</td>
-							<td>&gt;8k</td>
-							<td>I</td>
-						</tr>
-						<tr>
-							<td>[24]</td>
-							<td>&gt;40</td>
-							<td>&le;8k</td>
-							<td>I</td>
-						</tr>
-						
-					</tbody>
-				</table>
-			</div>
-			<!-- Quadro [fim] -->
+			<table class="table table--text-table">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Idade</th>
+						<th scope="col">Renda</th>
+						<th scope="col">classe</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>[1]</td>
+						<td>&le;40</td>
+						<td>&le8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[2]</td>
+						<td>&le;40</td>
+						<td>&le8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[3]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[4]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[5]</td>
+						<td>&le;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[6]</td>
+						<td>&le;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[7]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[8]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[9]</td>
+						<td>&le;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[10]</td>
+						<td>&le;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[11]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[12]</td>
+						<td>&le;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[13]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[14]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[15]</td>
+						<td>&gt;40</td>
+						<td>&gt;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[16]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[17]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[18]</td>
+						<td>&gt;40</td>
+						<td>&gt;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[19]</td>
+						<td>&gt;40</td>
+						<td>&gt;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[20]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[21]</td>
+						<td>&gt;40</td>
+						<td>&gt;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[22]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>N</td>
+					</tr>
+					<tr>
+						<td>[23]</td>
+						<td>&gt;40</td>
+						<td>&gt;8k</td>
+						<td>I</td>
+					</tr>
+					<tr>
+						<td>[24]</td>
+						<td>&gt;40</td>
+						<td>&le;8k</td>
+						<td>I</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<!-- Quadro [fim] -->
+
+		</section>
 
 	</div>
 

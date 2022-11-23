@@ -30,7 +30,7 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image" src="dist/img/unidade-03/cozinhando.jpeg" alt="Imagem de alguém preparando uma receita.">
+					<img class="image" src="dist/img/un03/cozinhando.jpeg" alt="Imagem de alguém preparando uma receita.">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
@@ -53,12 +53,12 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image" src="dist/img/unidade-03/etapa-aprendizado-01.png" alt="Representacao da etapa de aprendizado">
+					<img class="image" src="dist/img/un03/etapa-aprendizado-01.png" alt="Representacao da etapa de aprendizado">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Etapa de aprendizado
+				Figura 1: Etapa de aprendizado
 			</figcaption>
 		</figure>
 		<!-- Imagem [fim] -->
@@ -72,12 +72,12 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image"src="dist/img/unidade-03/etapa-classificacao-02.png" alt="Representacao da etapa de classificação">
+					<img class="image"src="dist/img/un03/etapa-classificacao-02.png" alt="Representacao da etapa de classificação">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Etapa de classificação
+				Figura 2: Etapa de classificação
 			</figcaption>
 		</figure>
 		<!-- Imagem [fim] -->

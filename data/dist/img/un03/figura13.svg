@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 628 479" viewBox="0 0 628 479">
+  <style>
+    .DIAGRAM_connection_x002D_line,.st2{fill:none;stroke-miterlimit:10;stroke:#767676;stroke-width:2}.st3{fill:#fff}.st4{fill:#767676}.st5{font-family:&quot;Roboto-Bold&quot;}.st6{font-size:16px}.st7{font-size:21px}.st10{fill:none}.st11{font-family:&quot;Roboto-Regular&quot;}.st12{font-size:13px}
+  </style>
+  <path id="MAP_x5F_dimension-lines" d="M1376-38v20m0-10-10-10m0 20 10-10" style="stroke:#f14600;stroke-width:.5;fill:none;stroke-miterlimit:10"/>
+  <path id="DIAGRAM_x5F_background" d="M0 0h628v479H0z" style="fill:#e2e2e2"/>
+  <g id="DIAGRAM_x5F_drawing">
+    <path d="M218-308v-45c0-5.5 4.5-10 10-9.99l77.5.04c5.5 0 10-4.49 10-9.99V-418" class="DIAGRAM_connection_x002D_line"/>
+    <path d="M23-308v-45c0-5.5 4.5-10 10-10l192.5.05M413-308v-45c0-5.5-4.5-10-10-9.99l-77.5.04c-5.5 0-10-4.49-10-9.99V-418" class="st2"/>
+    <path d="M613-308v-45c0-5.5-4.5-10-10-10l-207.5.05" class="DIAGRAM_connection_x002D_line"/>
+  </g>
+  <g id="DIAGRAM_x5F_text">
+    <path d="M211.5 342.67h45c5.5 0 10-4.5 9.99-10l-.04-77.5c0-5.5 4.49-10 9.99-10h59.06" style="fill:none;stroke:#767676;stroke-width:2;stroke-miterlimit:10"/>
+    <path d="M211.5 147.67h45c5.5 0 10 4.5 9.99 10l-.04 77.5c0 5.5 4.49 10 9.99 10h59.06" class="st2"/>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M120 124.17h88v53h-88z" class="st3"/>
+      <path d="M207 125.17v51h-86v-51h86m2-2h-90v55h90v-55z" class="st4"/>
+    </g>
+    <text class="st5 st6" transform="translate(129 148.17)">X1</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M120 220.67h88v53h-88z" class="st3"/>
+      <path d="M207 221.67v51h-86v-51h86m2-2h-90v55h90v-55z" class="st4"/>
+    </g>
+    <text class="st5 st6" transform="translate(129 244.67)">X2</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M336.5 210.67h65v68h-65z" class="st3"/>
+      <path d="M400.5 211.67v66h-63v-66h63m2-2h-67v70h67v-70z" class="st4"/>
+    </g>
+    <text transform="translate(350.83 252.17)"><tspan x="0" y="0" class="st5 st7">∑ | </tspan><tspan x="28.94" y="0" class="st7" style="font-family:&quot;Roboto-BoldItalic&quot;">f</tspan></text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M119.5 317.17h88v53h-88z" class="st3"/>
+      <path d="M206.5 318.17v51h-86v-51h86m2-2h-90v55h90v-55z" class="st4"/>
+    </g>
+    <text class="st5" style="font-size:14px" transform="translate(128.5 341.17)">X3</text>
+    <path d="M211.5 245.67h124m69-1h62" class="st2"/>
+    <path d="M207.5 107.83h50v40h-50z" class="st10"/>
+    <text class="st4 st11 st12" transform="translate(217.501 132.83)">W1</text>
+    <path d="M207.5 206.83h50v40h-50z" class="st10"/>
+    <text class="st4 st11 st12" transform="translate(217.501 231.83)">W2</text>
+    <path d="M207.5 301.83h50v40h-50z" class="st10"/>
+    <text class="st4 st11 st12" transform="translate(217.501 326.83)">W3</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M467.19 223.16h41.31v43.01h-41.31z" class="st3"/>
+      <path d="M507.5 224.16v41.01h-39.31v-41.01h39.31m2-2h-43.31v45.01h43.31v-45.01z" class="st4"/>
+    </g>
+    <text class="st5 st6" transform="translate(483.832 250.17)">y</text>
+  </g>
+</svg>

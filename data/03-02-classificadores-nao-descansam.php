@@ -38,7 +38,10 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image" src="dist/img/01-spam-filter.jpeg" alt="Imagem representando um filtro de spam">
+					<source srcset="dist/img/un03/01-filtro-spam.jpg" media="(min-width:1200px)" />
+					<source srcset="dist/img/un03/01-filtro-spam.jpg" media="(min-width:600px)" />
+					<source srcset="dist/img/un03/01-filtro-spam.jpg" media="(min-width:1px)" />
+					<img class="image" src="dist/img/un03/01-filtro-spam.jpg" alt="Imagem representando um filtro de spam">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
@@ -80,10 +83,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img001--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img001--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img001--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img001--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/cartao_credito.jpg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/cartao_credito.jpg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/cartao_credito.jpg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/cartao_credito.jpg" alt="Imagem mostrando uma máquina para pagamento com cartão de crédito.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>As administradoras de cartão de crédito utilizam modelos de classificação para detectar se uma transação financeira é “legal” ou “suspeita”. </p>
@@ -94,10 +97,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img002--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img002--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img002--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img002--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/atendimento-banco.jpeg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/atendimento-banco.jpeg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/atendimento-banco.jpeg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/atendimento-banco.jpeg" alt="Gerente de banco cumprimenta cliente.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>Os bancos usam classificadores para classificar um cliente como de “alto”, “médio” ou “baixo” risco para um empréstimo bancário.</p>
@@ -108,10 +111,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img003--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img003--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img003--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img003--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/petroleo.jpg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/petroleo.jpg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/petroleo.jpg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/petroleo.jpg" alt="Plataforma de petróleo na Baía de Guanabara com a paisagem do Corcovado ao fundo.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>As empresas de petróleo utilizam classificadores que analisam imagens de ressonância magnética de rochas e as classificam como de “alta permeabilidade” ou “baixa permeabilidade”. Rochas com alta permeabilidade possuem maior chance de conter petróleo.</p>
@@ -122,10 +125,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img004--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img004--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img004--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img004--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/emojis.jpg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/emojis.jpg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/emojis.jpg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/emojis.jpg" alt="Arara com emojis de pelúcia pendurados.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>Classificadores de sentimento analisam textos que contém opiniões de pessoas sobre filmes, produtos, notícias e classificam a opinião como “positiva” ou “negativa”.</p>
@@ -136,10 +139,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img001--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img001--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img001--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img001--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/jornais.jpg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/jornais.jpg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/jornais.jpg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/jornais.jpg" alt="Imagem em preto e branco e desfocada, mostrando o recorte de uma pilha de jornais.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>Os portais de notícia utilizam sistemas de classificação para atribuir automaticamente a categoria de um artigo (“Esporte”, “Cultura”, “Economia” etc.).</p>
@@ -150,10 +153,10 @@ include "head.php";
 			<li class="col-xs-12 col-md-8">
 				<figure class="photo-mosaic__img-container">
 					<picture>
-						<source srcset="dist/img/example-img002--lg.jpg" media="(min-width:1200px)">
-						<source srcset="dist/img/example-img002--md.jpg" media="(min-width:600px)">
-						<source srcset="dist/img/example-img002--sm.jpg" media="(min-width:1px)">
-						<img class="image" src="dist/img/example-img002--lg.jpg" alt="Descrição da imagem.">
+						<source srcset="dist/img/un03/remedios.jpeg" media="(min-width:1200px)">
+						<source srcset="dist/img/un03/remedios.jpeg" media="(min-width:600px)">
+						<source srcset="dist/img/un03/remedios.jpeg" media="(min-width:1px)">
+						<img class="image" style="aspect-ratio: 770 / 478" src="dist/img/un03/remedios.jpeg" alt="Descrição da imagem.">
 					</picture>
 					<figcaption class="photo-mosaic__img-caption">
 						<p>As empresas farmacêuticas, utilizam sistemas de classificação para tentar prever o conjunto de reações adversas que novas drogas podem causar.</p>

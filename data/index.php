@@ -17,7 +17,7 @@
     
     <script src="dist/js/scorm.min.js"></script>
     <script src="dist/js/menu.js"></script>
-    <script src="src/js/nav.js"></script>
+    <script src="dist/js/nav.min.js"></script>
     <style>
       .loading {
         font-size:4em;

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 628 770" viewBox="0 0 628 770">
+  <style>
+    .DIAGRAM_connection_x002D_line_x0020_2{fill:none}.DIAGRAM_connection_x002D_line_x0020_2,.st2{stroke-miterlimit:10;stroke:#767676;stroke-width:2}.st2,.st4{fill:none}.st5{fill:#fff}.st6{fill:#767676}.st7{font-family:&quot;Roboto-Bold&quot;}.st8{font-size:16px}.st9{font-size:14px}.st10{font-family:&quot;Roboto-Regular&quot;}.st11{font-size:13px}
+  </style>
+  <path id="DIAGRAM_x5F_background" d="M0 0h628v770H0z" style="fill:#e2e2e2"/>
+  <g id="DIAGRAM_x5F_text">
+    <path d="M223 32h138v706H223z" style="fill:#e7e7e7;stroke:#767676;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4"/>
+    <path d="M246 505h-45c-5.5 0-10-4.5-9.99-10l.04-77.5c0-5.5-4.49-10-9.99-10H136" class="DIAGRAM_connection_x002D_line_x0020_2"/>
+    <path d="M246 700h-45c-5.5 0-10-4.5-10-10l.05-192.5M246 310h-45c-5.5 0-10 4.5-9.99 10l.04 77.5c0 5.5-4.49 10-9.99 10H136" class="st2"/>
+    <path d="M246 110h-45c-5.5 0-10 4.5-10 10l.05 207.5M343 505h45c5.5 0 10-4.5 9.99-10l-.04-77.5c0-5.5 4.49-10 9.99-10H467" class="DIAGRAM_connection_x002D_line_x0020_2"/>
+    <path d="M343 700h45c5.5 0 10-4.5 10-10l-.05-192.5M343 310h45c5.5 0 10 4.5 9.99 10l-.04 77.5c0 5.5 4.49 10 9.99 10H467" class="st2"/>
+    <path d="M343 110h45c5.5 0 10 4.5 10 10l-.05 207.5" class="DIAGRAM_connection_x002D_line_x0020_2"/>
+    <path d="M48 565V460" class="st4"/>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M251.5 85.5h88v53h-88z" class="st5"/>
+      <path d="M338.5 86.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st6"/>
+    </g>
+    <text class="st7 st8" transform="translate(260.5 109.5)">AD1</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M251.5 286.5h88v53h-88z" class="st5"/>
+      <path d="M338.5 287.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st6"/>
+    </g>
+    <text class="st7 st8" transform="translate(260.5 310.5)">AD2</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M251.5 671.5h88v53h-88z" class="st5"/>
+      <path d="M338.5 672.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st6"/>
+    </g>
+    <text class="st7 st8" transform="translate(260.5 695.5)">AD</text>
+    <text class="st7 st8" transform="matrix(.583 0 0 .583 281.664 700.828)">k</text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M28 352h131v108H28z" class="st5"/>
+      <path d="M158 353v106H29V353h129m2-2H27v110h133V351z" class="st6"/>
+    </g>
+    <text transform="translate(37 376)"><tspan x="0" y="0" class="st7 st8">Base de  </tspan><tspan x="0" y="20" class="st7 st8">treinamento</tspan></text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M468 354h132v108H468z" class="st5"/>
+      <path d="M599 355v106H469V355h130m2-2H467v110h134V353z" class="st6"/>
+    </g>
+    <text transform="translate(477 378)"><tspan x="0" y="0" class="st7 st8">Classe </tspan><tspan x="0" y="20" class="st7 st8">predita</tspan></text>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M251 479.5h88v53h-88z" class="st5"/>
+      <path d="M338 480.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st6"/>
+    </g>
+    <text class="st7 st9" transform="translate(260 503.5)">AD3 - AD</text>
+    <text class="st7 st9" transform="matrix(.583 0 0 .583 314.232 508.162)">k-1</text>
+    <path d="M397 348h86v59h-86z" class="st4"/>
+    <text transform="translate(407 373)"><tspan x="0" y="0" class="st6 st10 st11">Combina  </tspan><tspan x="0" y="16" class="st6 st10 st11">os votos</tspan></text>
+    <path d="M223 32.85h138v40H223z" class="st4"/>
+    <text class="st10 st8" transform="translate(267.46 57.85)">novo objeto</text>
+    <path d="M185.9 77.28h86v59h-86z" class="st4"/>
+    <text class="st6 st10 st11" transform="translate(195.899 102.276)">D1</text>
+    <path d="M185.9 274.28h86v59h-86z" class="st4"/>
+    <text class="st6 st10 st11" transform="translate(195.899 299.276)">D2</text>
+    <path d="M189.9 468.28h86V536h-86z" class="st4"/>
+    <text class="st6 st10 st11" transform="translate(199.899 493.275)">D3  </text>
+    <text class="st6 st10 st11" transform="translate(199.899 525.275)">D</text>
+    <text class="st6 st10 st11" transform="matrix(.583 0 0 .583 208.423 529.604)">k-1</text>
+    <path d="M189.9 662.28h86v59h-86z" class="st4"/>
+    <text class="st6 st10 st11" transform="translate(199.899 687.276)">D</text>
+    <text class="st6 st10 st11" transform="matrix(.583 0 0 .583 208.423 691.605)">K</text>
+    <text class="st6 st10 st11" transform="translate(212.524 687.276)"> </text>
+  </g>
+</svg>

@@ -32,11 +32,11 @@
   <script src="dist/js/menu.js"></script>
   <script src="dist/js/nav.min.js"></script>
   <script>  
-    var nextPage = proximaPagina();//Proxima pagina
+    var nextPage = proximaPagina(); //Proxima pagina
   </script>
 </head>
-<!-- <body onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()"> -->
-<body onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()">
+<body onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()">
+<!-- <body onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()"> -->
   <!--[if lt IE 7]>
     <p class="obsoletebrowser">Você está usando um navegador de internet obsoleto. Por favor atualize para uma melhor experiência.</p>
   <![endif]-->

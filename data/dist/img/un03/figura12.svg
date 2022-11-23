@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" style="enable-background:new 0 0 450 375.11" version="1.1" viewBox="0 0 450 375.11">
+  <style>
+    .st1{fill:#d15761;stroke:#767676;stroke-width:.5;stroke-miterlimit:10}.st3{fill:#00808b}.st4{font-family:&quot;Roboto-Medium&quot;}.st5{font-size:15px}.st7{fill:#74bdff;stroke:#767676;stroke-width:.5;stroke-miterlimit:10}
+  </style>
+  <path d="M-.43 0h450v375.11h-450z" style="fill:#e2e2e2"/>
+  <path d="M88.1 257.49h15v15h-15z" class="st1"/>
+  <path d="M295.77 286.03h95.39V324h-95.39z" style="fill:none"/>
+  <text transform="translate(295.766 297.283)"><tspan x="0" y="0" class="st3 st4 st5">Fronteira  </tspan><tspan x="0" y="18" class="st3 st4 st5">de decisão</tspan></text>
+  <path d="m292.69 282.08-8.44-10.61" style="fill:none;stroke:#00808b;stroke-width:2;stroke-miterlimit:10"/>
+  <path d="m289.39 272.48-4.77-.54-.54 4.76-1.79-2.25.54-4.76 4.76.54z" class="st3"/>
+  <circle cx="261.06" cy="142.71" r="7.72" class="st7"/>
+  <circle cx="209.29" cy="134.99" r="7.72" class="st7"/>
+  <circle cx="261.06" cy="235.85" r="7.72" class="st7"/>
+  <circle cx="201.57" cy="228.13" r="7.72" class="st7"/>
+  <circle cx="186.13" cy="177.06" r="7.72" class="st7"/>
+  <path d="M217.01 197.81h16.3v16.3h-16.3z" class="st1"/>
+  <circle cx="233.31" cy="169.34" r="7.72" class="st7"/>
+  <circle cx="276.49" cy="184.78" r="7.72" class="st7"/>
+  <path d="M217.01 199.11h15v15h-15z" class="st1"/>
+  <circle cx="228.36" cy="186.57" r="85.91" style="fill:none;stroke:#c5c5c5;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4"/>
+  <path d="M104.39 204.55h15v15h-15zM252.91 66.92h15v15h-15zm-131.2 41.26h15v15h-15zm217.14 35.83h15v15h-15zM177.98 282.27h15v15h-15zM291.16 88.03h15v15h-15zm60.46 97.62h15v15h-15z" class="st1"/>
+</svg>

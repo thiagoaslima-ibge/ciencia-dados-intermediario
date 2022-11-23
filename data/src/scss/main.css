@@ -4262,6 +4262,8 @@ html, body {
   overflow: hidden;
   color: #3d3d3d;
   font-family: "Roboto", sans-serif;
+  -ms-font-feature-settings: "onum" 1;
+    font-feature-settings: "onum" 1;
 }
 
 html {

@@ -71,7 +71,7 @@ include "head.php";
 			<p>
 				O método conhecido como <i>holdout</i> é o mais simples dentre os utilizados para a avaliação de modelos de 
 				classificação. Nesta abordagem, a base de dados rotulada é dividida de forma aleatória em dois conjuntos 
-				(ou partições) independentes: conjunto de treinamento e conjunto de teste (Figura 18). Tipicamente, dois terços 
+				(ou partições) independentes: conjunto de treinamento e conjunto de teste (Figura 15). Tipicamente, dois terços 
 				dos dados são alocados para treino e o terço restante é alocado para teste. A divisão deve ser feita de maneira 
 				aleatória, mas idealmente o processo deve garantir que cada classe seja adequadamente representada tanto no 
 				conjunto de treinamento como no de teste (processo conhecido como estratificação). Uma vez que as duas 
@@ -86,30 +86,19 @@ include "head.php";
 			class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right"
 		>
 			<picture>
-			<source
-				srcset="dist/img/image22.png"
-				media="(min-width:1200px)"
-			/>
-			<source
-				srcset="dist/img/image22.png"
-				media="(min-width:600px)"
-			/>
-			<source
-				srcset="dist/img/image22.png"
-				media="(min-width:1px)"
-			/>
-			<img
-				class="image"
-				src="dist/img/image21.png"
-				alt="Partições geradas pelo método holdout."
-			/>
+				<table style="width:100%">
+					<tr>
+						<td style="width:50%; background:lightyellow">TREINO</td>
+						<td style="width:50%; background:lightgray">TESTE</td>
+					</tr>
+				</table>
 			</picture>
 		</div>
 		<figcaption
 			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
 		>
 			<div class="img-container__top-line"></div>
-			Figura 18: Partições geradas pelo método <i>holdout</i>. 
+			Figura 15. Partições geradas pelo método <i>holdout</i>. 
 		</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -125,7 +114,7 @@ include "head.php";
 				Felizmente, existem técnicas capazes de obter estimativas mais confiáveis para o desempenho preditivo 
 				de um classificador.  Uma delas é a validação cruzada (<i>cross-validation</i>). Nesta técnica, a base rotulada 
 				é dividida em <i>k</i> partições (<i>folds</i>) <i>D<sub>1</sub>, D<sub>2</sub>, ..., D<sub>k</sub></i>, onde todas deverão ter o tamanho igual ou 
-				aproximadamente igual. Na Figura 19, apresenta-se um exemplo onde <i>k</i>=10, um dos valores mais comumente 
+				aproximadamente igual. Na Figura 16, apresenta-se um exemplo onde <i>k</i>=10, um dos valores mais comumente 
 				utilizados. Após a divisão, são realizadas <i>k</i> rodadas de treino e teste. A cada iteração <i>i</i>, 
 				a partição <i>D<sub>i</sub></i> é reservada para teste e as <i>k-1</i> partições restantes são utilizadas para treinar o modelo. 
 				Por exemplo, para <i>k</i>=1, reserva-se as observações pertencentes a <i>D<sub>1</sub></i> para teste, e utiliza-se as 
@@ -143,30 +132,27 @@ include "head.php";
 		<figure class="img-container">
 		<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 			<picture>
-			<source
-				srcset="dist/img/image23.png"
-				media="(min-width:1200px)"
-			/>
-			<source
-				srcset="dist/img/image23.png"
-				media="(min-width:600px)"
-			/>
-			<source
-				srcset="dist/img/image23.png"
-				media="(min-width:1px)"
-			/>
-			<img
-				class="image"
-				src="dist/img/image23.png"
-				alt="Partições geradas pelo método de validação cruzada, quando k=10."
-			/>
+			<table style="width:100%">
+					<tr>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">1</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">2</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">3</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">4</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">5</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">6</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">7</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">8</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey">9</td>
+						<td style="width:10%; text-align:center; border-left: 1px solid lightgrey;border-right: 1px solid lightgrey">10</td>
+					</tr>
+				</table>
 			</picture>
 		</div>
 		<figcaption
 			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
 		>
 			<div class="img-container__top-line"></div>
-			Figura 19: Partições geradas pelo método de validação cruzada, quando <i>k</i>=10. 
+			Figura 16. Partições geradas pelo método de validação cruzada, quando <i>k</i>=10. 
 		</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->

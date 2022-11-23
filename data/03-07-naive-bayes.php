@@ -49,12 +49,12 @@ include "head.php";
 
 			<h2>Etapa de treinamento</h2>
 			<p>O princípio básico do NB consiste em treinar um modelo que possibilite a aplicação do <a href="https://pt.wikipedia.org/wiki/Teorema_de_Bayes"><strong>Teorema de Bayes</strong> (ou regra de Bayes)</a> para estimar a classe mais provável de um novo objeto. Para tal, na etapa de treinamento o algoritmo computa uma tabela de probabilidades que resume a base de dados de treinamento com informações suficientes para a aplicação deste teorema.</p>
-			<p>A seguir apresentaremos um exemplo que mostra detalhadamente o processo de treinamento de um classificador NB. Considere a base de dados apresentada na Tabela 4. Suponha que as 15 observações desta base representem dados de uma pesquisa sobre o endividamento de casais jovens. A base registra se o casal possui filhos, a escolaridade do(a) responsável pela família e se a família possui ou não algum tipo de dívida com o cartão de crédito.</p>
+			<p>A seguir apresentaremos um exemplo que mostra detalhadamente o processo de treinamento de um classificador NB. Considere a base de dados apresentada no Quadro 2. Suponha que as 15 observações desta base representem dados de uma pesquisa sobre o endividamento de casais jovens. A base registra se o casal possui filhos, a escolaridade do(a) responsável pela família e se a família possui ou não algum tipo de dívida com o cartão de crédito.</p>
 
 			<!-- Tabela [inicio] -->
 			<div class="table-container">
 				<table class="table">
-					<caption class="table__title">Base com os dados de endividamento de casais jovens.</caption>
+					<caption class="table__title">Quadro 2: Base com os dados de endividamento de casais jovens.</caption>
 					<thead>
 						<tr>
 							<th scope="col">filhos</th>
@@ -138,12 +138,12 @@ include "head.php";
 			</div>
 			<!-- Tabela [fim] -->
 
-			<p>Suponha que desejamos utilizar o algoritmo NB para treinar um modelo de classificação para prever se uma família possui ou não dívida de cartão de crédito em função de possuir ou não filhos e do nível de escolaridade do(a) responsável pela família. Com o algoritmo NB, a construção do modelo de classificação é muito barata do ponto de vista computacional, consistindo basicamente em montar uma <strong>tabela de probabilidades condicionais</strong> contendo um resumo dos dados contidos na base de dados de treinamento. A tabela referente ao nosso exemplo é mostrada na Tabela 5.</p>
+			<p>Suponha que desejamos utilizar o algoritmo NB para treinar um modelo de classificação para prever se uma família possui ou não dívida de cartão de crédito em função de possuir ou não filhos e do nível de escolaridade do(a) responsável pela família. Com o algoritmo NB, a construção do modelo de classificação é muito barata do ponto de vista computacional, consistindo basicamente em montar uma <strong>tabela de probabilidades condicionais</strong> contendo um resumo dos dados contidos na base de dados de treinamento. A tabela referente ao nosso exemplo é mostrada na Tabela 4.</p>
 
 			<!-- Tabela [inicio] -->
 			<div class="table-container">
 				<table class="table">
-					<caption class="table__title">Modelo de classificação naïve Bayes gerado a partir da análise da base de dados de endividamento de casais jovens.</caption>
+					<caption class="table__title">Tabela 4: Modelo de classificação naïve Bayes gerado a partir da análise da base de dados de endividamento de casais jovens.</caption>
 					<thead>
 						<tr>
 							<th scope="col" rowspan="2">dívida_cartão</th>

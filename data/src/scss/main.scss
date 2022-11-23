@@ -23,6 +23,7 @@ html, body {
   overflow: hidden;	
   color: $greyDark6;
   font-family: $baseFont;
+	@include prefix(font-feature-settings, "onum" 1, webkit moz ms);
 }
 html {
   font-size: 16px; /* Tamanho base de fonte :ROOT em mobile */

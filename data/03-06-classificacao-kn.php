@@ -55,7 +55,7 @@ include "head.php";
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<div class="table-container">
 				<table class="table tabletext-table">
-					<caption class="table__title">Base de treinamento para a classificação da classe de renda</caption>
+					<caption class="table__title">Tabela 1: Base de treinamento para a classificação da classe de renda</caption>
 					<thead>
 						<tr>
 							<th class="table__numeric-col-heading" scope="col">anos de estudo</th>
@@ -230,7 +230,7 @@ include "head.php";
 			<div class="table-container">
 				<table class="table">
 					<caption class="table__title">
-						Base para classificação da classe de renda, com os atributos anos de estudo e horas trabalhadas normalizados para a faixa [0, 1].
+					Tabela 2: Base para classificação da classe de renda, com os atributos anos de estudo e horas trabalhadas normalizados para a faixa [0, 1].
 					</caption>
 					<thead>
 						<tr>
@@ -348,7 +348,7 @@ include "head.php";
 			<div class="table-container">
 				<table class="table">
 					<caption class="table__title">
-					Base para classificação da classe de renda normalizada e com a informação da distância euclidiana entre cada observação e o <i>novoObj</i>.
+					Tabela 3: Base para classificação da classe de renda normalizada e com a informação da distância euclidiana entre cada observação e o <i>novoObj</i>.
 					</caption>
 					<thead>
 						<tr>

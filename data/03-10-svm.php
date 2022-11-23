@@ -52,7 +52,7 @@ include "head.php";
 				entendida. Veja a seguir.
 			</p>
 			<p>
-				Considere a base de treinamento representada graficamente na Figura 12. Nela, temos objetos de duas classes –
+				Considere a base de treinamento representada graficamente na Figura 9. Nela, temos objetos de duas classes –
 				quadradinhos vermelhos e bolinhas azuis – e uma fronteira de decisão gerada por algum algoritmo de classificação.
 				Esta fronteira de decisão separa os objetos dessas classes. Ela pode também ser chamada de <strong>hiperplano separador</strong>.
 				A figura mostra ainda dois novos objetos <i>A</i> e <i>B</i>, que deverão ser classificados de acordo com o hiperplano separador.
@@ -63,15 +63,12 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image16.png" media="(min-width:1200px)" />
-					<source srcset="dist/img/unidade-03/image16.png" media="(min-width:600px)" />
-					<source srcset="dist/img/unidade-03/image16.png" media="(min-width:1px)" />
-					<img class="image" src="dist/img/unidade-03/image16.png" alt="Representação gráfica de uma base de dados de treinamento com objetos de duas classes." />
+					<img class="image" src="dist/img/un03/figura09.svg" alt="Representação gráfica de uma base de dados de treinamento com objetos de duas classes." />
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 12. Representação gráfica de uma base de dados de treinamento com objetos de duas classes. Apresenta-se ainda um hiperplano separador dos objetos dessas classes e dois novos objetos A e B.
+				Figura 9. Representação gráfica de uma base de dados de treinamento com objetos de duas classes. Apresenta-se ainda um hiperplano separador dos objetos dessas classes e dois novos objetos A e B.
 			</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -110,7 +107,7 @@ include "head.php";
 		<section class="col-xs-22 col-xs-offset-1 col-sm-18 col-sm-offset-3 col-md-14 col-md-offset-5 col-lg-10 col-lg-offset-7">
 			<h2>Etapa de Treinamento</h2>
 			<p>
-				O princípio para treinar um classificador <span class="small-caps">SVM</span> será explicado com o uso da base de dados da Tabela 7. Ela contém dois
+				O princípio para treinar um classificador <span class="small-caps">SVM</span> será explicado com o uso da base de dados da Tabela 5. Ela contém dois
 				atributos preditivos, X<sub>1</sub> e X<sub>2</sub>, e um atributo classe <span class="code-inline">Y ∈ {-1, 1}</span> – o <span class="small-caps">SVM</span> adota essa notação em vez de {0, 1}.
 				Veja que há 4 objetos com o rótulo de classe 1 e que há outros 5 da classe -1
 			</p>
@@ -118,7 +115,7 @@ include "head.php";
 			<!-- Tabela [inicio] -->
 			<div class="table-container">
 				<table class="table">
-					<caption class="table__title">Tabela 7: Base de dados para treinamento de um modelo <span class="small-caps">SVM</span>.</caption>
+					<caption class="table__title">Tabela 5: Base de dados para treinamento de um modelo <span class="small-caps">SVM</span>.</caption>
 					<thead>
 						<tr>
 							<th class="table__numeric-col-heading" scope="col">X<sub>1</sub></th>
@@ -183,7 +180,7 @@ include "head.php";
 				Se representarmos essa base de dados graficamente, veremos que os dados são <strong>linearmente separáveis</strong>.
 				Isso significa que uma linha reta (hiperplano) pode ser desenhada de modo que os objetos da classe +1
 				fiquem de um lado e os da classe -1 do outro (dizemos que a reta gera um modelo com erro de treinamento igual a 0).
-				Mais precisamente, infinitos hiperplanos separadores poderiam ser desenhados como mostra a Figura 13.
+				Mais precisamente, infinitos hiperplanos separadores poderiam ser desenhados como mostra a Figura 10.
 				Todos esses hiperplanos classificam perfeitamente os objetos de treinamento. Porém, não há garantias de que
 				a mesma performance se repetirá para novos objetos. Desta forma, o <span class="small-caps">SVM</span> deverá escolher um deles,
 				baseado em quão bem funcionará para novos objetos.
@@ -194,15 +191,12 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image17.png" media="(min-width:1200px)" />
-					<source srcset="dist/img/unidade-03/image17.png" media="(min-width:600px)" />
-					<source srcset="dist/img/unidade-03/image17.png" media="(min-width:1px)" />
-					<img class="image" src="dist/img/unidade-03/image17.png" alt="Um classificador Random Forest ." />
+					<img class="image" src="dist/img/un03/figura10.svg" alt="Um classificador Random Forest ." />
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 13. Infinitos hiperplanos separadores com erro de treinamento igual a zero.
+				Figura 10. Infinitos hiperplanos separadores com erro de treinamento igual a zero.
 			</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -213,7 +207,7 @@ include "head.php";
 				Mas então, qual hiperplano será escolhido? A resposta é: o <span class="small-caps">SVM</span> irá procurar
 				pelo <strong>hiperplano de margem máxima</strong> (<i>Maximum Margin Hyperplane</i> – <span class="small-caps">MMH</span>). Basicamente é o hiperplano que consegue
 				classificar perfeitamente os objetos de treino e, ao mesmo tempo, é capaz de produzir a maior distância (margem)
-				entre qualquer objeto da classe -1 e qualquer outro objeto da classe 1. A Figura 14 mostra um exemplo.
+				entre qualquer objeto da classe -1 e qualquer outro objeto da classe 1. A Figura 11 mostra um exemplo.
 			</p>
 			<p>
 				Mas por que encontrar o <span class="small-caps">MMH</span>? Da intuição apresentada no início da aula, nós vimos que em um hiperplano onde
@@ -226,17 +220,14 @@ include "head.php";
 
 		<!-- Imagem média [inicio] -->
 		<figure class="img-container">
-			<div class="col-xs-22 col-xs-offset-1 col-sm-10 col-sm-offset-3 col-md-8 col-md-offset-5 col-lg-6 col-lg-offset-7 gutter-sm-right">
+		<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image18.png" media="(min-width:1200px)" />
-					<source srcset="dist/img/unidade-03/image18.png" media="(min-width:600px)" />
-					<source srcset="dist/img/unidade-03/image18.png" media="(min-width:1px)" />
-					<img class="image" src="dist/img/unidade-03/image18.png" alt="Um classificador Random Forest ." />
+					<img class="image" src="dist/img/un03/figura11.svg" alt="Um classificador Random Forest ." />
 				</picture>
 			</div>
-			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
+			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 14: <i><span class="small-caps">MMH</span></i> é o hiperplano de margem máxima e <i>d</i> é a margem máxima.
+				Figura 11. <i><span class="small-caps">MMH</span></i> é o hiperplano de margem máxima e <i>d</i> é a margem máxima.
 				Pontos acima (ou à esquerda) de <span class="small-caps">H1</span> pertencem à classe +1 e pontos abaixo (ou à direita)
 				de <span class="small-caps">H2</span> pertencem à classe -1. Os pontos destacados são os mais próximos de <span class="small-caps">MMH</span>
 				para cada classe e são chamados de Support Vectors (<span class="small-caps">SVs</span>).
@@ -257,7 +248,7 @@ include "head.php";
 			<p>
 				Podemos reescalar os parâmetros w e b de forma que 2 hiperplanos paralelos H1 e H2 sejam expressos
 				na forma abaixo. Assim, qualquer objeto sobre ou acima de H1 pertence à classe +1 e qualquer objeto
-				sobre ou abaixo de H2 pertence à classe -1 (ambos são mostrados na Figura 14).
+				sobre ou abaixo de H2 pertence à classe -1 (ambos são mostrados na Figura 11).
 			</p>
 			<p>
 				H1: <i>w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + b</i> = 1
@@ -266,7 +257,7 @@ include "head.php";
 				H2: <i>w<sub>1</sub>x<sub>1</sub> + w<sub>2</sub>x<sub>2</sub> + b</i> = -1
 			</p>
 			<p>
-				Observando a Figura 14, podemos notar que temos dois pontos, um quadradinho e uma bolinha, que são os
+				Observando a Figura 11, podemos notar que temos dois pontos, um quadradinho e uma bolinha, que são os
 				mais próximos de H1 e H2, respectivamente. Eles são chamados de <strong>Support Vectors</strong> (<span class="small-caps">SVs</span>).
 				O objetivo do <span class="small-caps">SVM</span> é exatamente encontrar esses <span class="small-caps">SV’s</span> e, por consequência, encontrar a <span class="small-caps">MMH</span>.
 			</p>
@@ -391,7 +382,7 @@ include "head.php";
 			<p>
 				Nosso exemplo abordou uma situação onde os dados eram linearmente separáveis. Porém, o <span class="small-caps">SVM</span> pode ser estendido
 				para o caso em que os dados possuem fronteira de decisão não linear, isto é, quando não é possível traçar uma
-				reta que separe perfeitamente as classes, como é o caso da base de dados representada na Figura 15.
+				reta que separe perfeitamente as classes, como é o caso da base de dados representada na Figura 12.
 			</p>
 		</section>
 
@@ -399,15 +390,12 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<source srcset="dist/img/unidade-03/image19.png" media="(min-width:1200px)" />
-					<source srcset="dist/img/unidade-03/image19.png" media="(min-width:600px)" />
-					<source srcset="dist/img/unidade-03/image19.png" media="(min-width:1px)" />
-					<img class="image" src="dist/img/unidade-03/image19.png" alt="Um classificador Random Forest ." />
+					<img class="image" src="dist/img/un03/figura12.svg" alt="Um classificador Random Forest ." />
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
 				<div class="img-container__top-line"></div>
-				Figura 15: Representação gráfica de uma base de dados de treinamento com objetos de duas classes, onde a fronteira de decisão é não linear.
+				Figura 12. Representação gráfica de uma base de dados de treinamento com objetos de duas classes, onde a fronteira de decisão é não linear.
 			</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 777 536" viewBox="0 0 777 536">
+  <style>
+    .DIAGRAM_arrow_x002D_basic{fill:none;stroke:#767676;stroke-width:2;stroke-miterlimit:10}.st1{fill:#767676}.st2{fill:#fff}.st3{font-family:&quot;Roboto-Bold&quot;}.st4{font-size:16px}.st5{fill:#8764cd}.st6{fill:none}.st8{font-family:&quot;Roboto-Regular&quot;}.st9{font-size:13px}
+  </style>
+  <path id="DIAGRAM_x5F_background" d="M0 0h777v536H0z" style="fill:#e2e2e2"/>
+  <g id="DIAGRAM_x5F_text">
+    <path d="M241.12 254.05v102.6" class="DIAGRAM_arrow_x002D_basic"/>
+    <path d="M231.53 342.98a.995.995 0 0 1 1.38.31l8.22 12.9 8.22-12.9c.3-.47.92-.61 1.38-.31s.6.92.31 1.38l-9.06 14.23c-.18.29-.5.46-.84.46s-.66-.18-.84-.46l-9.06-14.23a.972.972 0 0 1-.16-.54c-.02-.32.15-.65.45-.84z" class="st1"/>
+    <path d="M331.12 199.05h107.6" class="DIAGRAM_arrow_x002D_basic"/>
+    <path d="M425.05 208.65a.995.995 0 0 1 .31-1.38l12.9-8.22-12.9-8.22a.995.995 0 0 1-.31-1.38c.3-.46.92-.6 1.38-.31l14.23 9.06c.29.18.46.5.46.84s-.18.66-.46.84l-14.23 9.06c-.17.11-.35.16-.54.16a.945.945 0 0 1-.84-.45z" class="st1"/>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M152.12 145.05h178v108h-178z" class="st2"/>
+      <path d="M329.12 146.05v106h-176v-106h176m2-2h-180v110h180v-110z" class="st1"/>
+    </g>
+    <text class="st3 st4" transform="translate(161.125 169.054)">Sexo</text>
+    <path d="M449.12 147.05h174v104h-174z" class="st2"/>
+    <path d="M620.12 150.05v98h-168v-98h168m6-6h-180v110h180v-110z" class="st5"/>
+    <text class="st3 st4" transform="translate(456.125 169.054)">Não</text>
+    <ellipse cx="240.88" cy="401.05" class="st2" rx="87" ry="34"/>
+    <path d="M240.88 370.05c23.28 0 45.07 3.69 61.36 10.39 14.18 5.83 22.64 13.53 22.64 20.61s-8.46 14.79-22.64 20.61c-16.29 6.7-38.08 10.39-61.36 10.39s-45.07-3.69-61.36-10.39c-14.18-5.83-22.64-13.53-22.64-20.61s8.46-14.79 22.64-20.61c16.29-6.7 38.08-10.39 61.36-10.39m0-6c-49.71 0-90 16.57-90 37s40.29 37 90 37 90-16.57 90-37-40.3-37-90-37z" class="st5"/>
+    <path d="M173.38 364.05h135v74h-135z" class="st6"/>
+    <text class="st3 st4" transform="translate(236.894 407.054)">?</text>
+    <text class="st3" style="font-size:20px" transform="translate(151.125 115.055)">AD parcial</text>
+    <path d="M242.12 289.05h55v40h-55z" class="st6"/>
+    <text class="st1 st8 st9" transform="translate(252.125 314.054)">F</text>
+    <path d="M331.12 199.05h115v30.39h-115z" class="st6"/>
+    <text class="st1 st8 st9" transform="translate(382.95 215.918)">M</text>
+  </g>
+</svg>

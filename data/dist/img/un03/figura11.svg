@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0" style="enable-background:new 0 0 450 375.11" version="1.1" viewBox="0 0 450 375.11">
+  <style>
+    .st1,.st2{fill:#74bdff;stroke:#767676;stroke-width:.5;stroke-miterlimit:10}.st2{fill:#d15761}.st5{fill:none}.st6{fill:#00808b}.st7{font-family:&quot;Roboto-Medium&quot;}.st8{font-size:16px}.st10,.st11{fill:none;stroke-miterlimit:10;stroke:#00808b;stroke-width:2}.st11{stroke:#c5c5c5;stroke-dasharray:4,4}
+  </style>
+  <path d="M-.43 0h450v375.11h-450z" style="fill:#e2e2e2"/>
+  <circle cx="395.95" cy="187.55" r="4.63" class="st1"/>
+  <circle cx="332.03" cy="104.67" r="4.63" class="st1"/>
+  <circle cx="327.4" cy="281.37" r="4.63" class="st1"/>
+  <path d="M104.13 59.39h9.78v9.78h-9.78zM67.01 178.03h9.78v9.78h-9.78z" class="st2"/>
+  <path d="m232.27 29.3-100.2 316.5m158.2-316.5-100.2 316.5m150.2-316.5-100.2 316.5" style="fill:none;stroke:#9a9a9a;stroke-width:2;stroke-miterlimit:10"/>
+  <circle cx="290.17" cy="234.37" r="4.63" class="st1"/>
+  <circle cx="386.69" cy="325.22" r="4.63" class="st1"/>
+  <path d="M156.86 178.03h9.78v9.78h-9.78z" class="st2"/>
+  <path d="m198.9 134.69 98.46 30.15" style="fill:none;stroke:#629df4;stroke-width:2;stroke-miterlimit:10;stroke-dasharray:4,4"/>
+  <path d="M94.16 262.75h23.94V286H94.16z" class="st5"/>
+  <text class="st6 st7 st8" transform="translate(94.157 274.752)">H</text>
+  <text class="st6 st7 st8" transform="matrix(.583 0 0 .583 105.524 280.08)">1</text>
+  <path d="M326.4 203.61h23.94v23.25H326.4z" class="st5"/>
+  <text class="st6 st7 st8" transform="translate(326.401 215.61)">H</text>
+  <text class="st6 st7 st8" transform="matrix(.583 0 0 .583 337.769 220.939)">2</text>
+  <path d="M236.64 254.07h49.38v17.37h-49.38z" class="st5"/>
+  <text class="st6 st7 st8" transform="translate(236.645 266.065)">MMH</text>
+  <path d="M284.3 106.62h21.41v14.36H284.3z" class="st5"/>
+  <text class="st6 st7 st8" transform="translate(284.295 118.615)">d</text>
+  <path d="M18.1 29.3h403.94M18.1 346.51h403.94" style="fill:none;stroke:#c5c5c5;stroke-miterlimit:10"/>
+  <path d="m113.91 274.38 27.34 10.79" class="st10"/>
+  <path d="m136.3 286.86 4.4-1.91-1.91-4.4 2.67 1.06 1.91 4.39-4.4 1.91z" class="st6"/>
+  <path d="m321.94 208.9-28.1-8.61" class="st10"/>
+  <path d="m298.64 198.22-4.24 2.25 2.25 4.23-2.75-.84-2.25-4.23 4.24-2.25z" class="st6"/>
+  <path d="m234.53 249.17-3.52-13.09" class="st10"/>
+  <path d="m235.31 239.05-4.15-2.4-2.39 4.16-.75-2.78 2.39-4.15 4.16 2.39z" class="st6"/>
+  <path d="m285.43 122.9-9.27 27.38" class="st10"/>
+  <path d="m274.23 145.42 2.12 4.3 4.3-2.12-.92 2.73-4.3 2.12-2.12-4.3z" class="st6"/>
+  <circle cx="161.74" cy="182.92" r="17.71" class="st11"/>
+  <circle cx="332.03" cy="104.67" r="17.71" class="st11"/>
+</svg>

@@ -33,7 +33,7 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image" src="dist/img/unidade-03/mise-en-plase.jpeg" alt="Imagem de ingredientes numa bancada.">
+					<img class="image" src="dist/img/un03/mise-en-plase.jpeg" alt="Imagem de ingredientes organizados numa bancada.">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">
@@ -71,7 +71,7 @@ include "head.php";
 		<div class="table-container">
 				<table class="table table--text-table">
 					<caption class="table__title">
-						Exemplo de base de dados de treinamento para criação de classificador
+						Quadro 1: Exemplo de base de dados de treinamento para criação de classificador
 					</caption>
 					<thead>
 						<tr>
@@ -129,7 +129,7 @@ include "head.php";
 		<figure class="img-container">
 			<div class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right">
 				<picture>
-					<img class="image" src="dist/img/unidade-03/PME.png" alt="imagem sugestiva de uma base de dados da PME">
+					<img class="image" src="dist/img/un03/PME.png" alt="imagem sugestiva de uma base de dados da PME">
 				</picture>
 			</div>
 			<figcaption class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption">

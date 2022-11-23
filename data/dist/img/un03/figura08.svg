@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 775 429" viewBox="0 0 775 429">
+  <style>
+    .st1{fill:#fff}.st2{fill:#767676}.st3{fill:none;stroke:#767676;stroke-width:2;stroke-miterlimit:10}.st4{font-family:&quot;Roboto-Bold&quot;}.st5{font-size:20px}
+  </style>
+  <path id="DIAGRAM_x5F_background" d="M.5 0h775v429H.5z" style="fill:#e2e2e2"/>
+  <g id="DIAGRAM_x5F_text">
+    <path d="M242.5 136.5h88v53h-88z" class="st1"/>
+    <path d="M329.5 137.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <path d="M152.5 57h88v53h-88z" class="st1"/>
+    <path d="M239.5 58v51h-86V58h86m2-2h-90v55h90V56z" class="st2"/>
+    <g class="DIAGRAM_box_x002D_text__basic">
+      <path d="M62.5 134.5h88v53h-88z" class="st1"/>
+      <path d="M149.5 135.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    </g>
+    <path d="m239.21 160.98-32.71-.21c-5.5-.04-10-4.57-10-10.07V111" class="st3"/>
+    <path d="m235.25 157.57 3.37 3.41-3.41 3.37 2.88.02 3.41-3.37-3.37-3.41z" class="st2"/>
+    <path d="m153.79 160.98 32.71-.21c5.5-.04 10-4.57 10-10.07V111" class="st3"/>
+    <path d="m157.79 164.35-3.41-3.37 3.37-3.41-2.88.02-3.37 3.41 3.41 3.37z" class="st2"/>
+    <path d="M612.5 141.5h88v53h-88z" class="st1"/>
+    <path d="M699.5 142.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <path d="M522.5 62h88v53h-88z" class="st1"/>
+    <path d="M609.5 63v51h-86V63h86m2-2h-90v55h90V61z" class="st2"/>
+    <g class="DIAGRAM_box_x002D_text__basic_x0020_2">
+      <path d="M432.5 139.5h88v53h-88z" class="st1"/>
+      <path d="M519.5 140.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    </g>
+    <path d="m609.21 165.98-32.71-.21c-5.5-.04-10-4.57-10-10.07V116" class="st3"/>
+    <path d="m605.25 162.57 3.37 3.41-3.41 3.37 2.88.02 3.41-3.37-3.37-3.41z" class="st2"/>
+    <path d="m523.79 165.98 32.71-.21c5.5-.04 10-4.57 10-10.07V116" class="st3"/>
+    <path d="m527.79 169.35-3.41-3.37 3.37-3.41-2.88.02-3.37 3.41 3.41 3.37z" class="st2"/>
+    <path d="M522.5 218.5h88v53h-88z" class="st1"/>
+    <path d="M609.5 219.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <path d="M432.5 139h88v53h-88z" class="st1"/>
+    <path d="M519.5 140v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <g class="DIAGRAM_box_x002D_text__basic_x0020_2">
+      <path d="M342.5 216.5h88v53h-88z" class="st1"/>
+      <path d="M429.5 217.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    </g>
+    <path d="m519.21 242.98-32.71-.21c-5.5-.04-10-4.57-10-10.07V193" class="st3"/>
+    <path d="m515.25 239.57 3.37 3.41-3.41 3.37 2.88.02 3.41-3.37-3.37-3.41z" class="st2"/>
+    <path d="m433.79 242.98 32.71-.21c5.5-.04 10-4.57 10-10.07V193" class="st3"/>
+    <path d="m437.79 246.35-3.41-3.37 3.37-3.41-2.88.02-3.37 3.41 3.41 3.37z" class="st2"/>
+    <path d="M612.5 298.5h88v53h-88z" class="st1"/>
+    <path d="M699.5 299.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <path d="M522.5 219h88v53h-88z" class="st1"/>
+    <path d="M609.5 220v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    <g class="DIAGRAM_box_x002D_text__basic_x0020_2">
+      <path d="M432.5 296.5h88v53h-88z" class="st1"/>
+      <path d="M519.5 297.5v51h-86v-51h86m2-2h-90v55h90v-55z" class="st2"/>
+    </g>
+    <path d="m609.21 322.98-32.71-.21c-5.5-.04-10-4.57-10-10.07V273" class="st3"/>
+    <path d="m605.25 319.57 3.37 3.41-3.41 3.37 2.88.02 3.41-3.37-3.37-3.41z" class="st2"/>
+    <path d="m523.79 322.98 32.71-.21c5.5-.04 10-4.57 10-10.07V273" class="st3"/>
+    <path d="m527.79 326.35-3.41-3.37 3.37-3.41-2.88.02-3.37 3.41 3.41 3.37z" class="st2"/>
+    <text class="st4 st5" transform="translate(179.707 229.844)">AD1</text>
+    <text class="st4 st5" transform="translate(551.707 391.844)">AD2</text>
+    <path d="M196.5 52.71V20c0-5.5 4.5-10 10-10h350c5.5 0 10 4.5 10 10v32.71" class="st3"/>
+    <path d="m199.89 48.73-3.39 3.39-3.39-3.39v2.88L196.5 55l3.39-3.39zm363.22 0 3.39 3.39 3.39-3.39v2.88L566.5 55l-3.39-3.39z" class="st2"/>
+  </g>
+</svg>

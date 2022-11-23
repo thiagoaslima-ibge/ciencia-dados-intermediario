@@ -64,7 +64,7 @@ include "head.php";
 				é devolvida ao usuário.
 			</p>
 			<p>
-				A Figura 10 resume o funcionamento de um classificador <span class="small-caps">RF</span>. Nas subseções a seguir,
+				A Figura 7 resume o funcionamento de um classificador <span class="small-caps">RF</span>. Nas subseções a seguir,
 				utilizaremos essa figura como base para explicar as etapas de treinamento e classificação da
 				<span class="small-caps">RF</span>.
 			</p>
@@ -76,21 +76,9 @@ include "head.php";
 			class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right"
 		>
 			<picture>
-			<source
-				srcset="dist/img/unidade-03/image8.png"
-				media="(min-width:1200px)"
-			/>
-			<source
-				srcset="dist/img/unidade-03/image8.png"
-				media="(min-width:600px)"
-			/>
-			<source
-				srcset="dist/img/unidade-03/image8.png"
-				media="(min-width:1px)"
-			/>
 			<img
 				class="image"
-				src="dist/img/unidade-03/image8.png"
+				src="dist/img/un03/figura07.svg"
 				alt="Princípio de funcionamento da Random Forest."
 			/>
 			</picture>
@@ -99,7 +87,7 @@ include "head.php";
 			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
 		>
 			<div class="img-container__top-line"></div>
-			Figura 10: Princípio de funcionamento da Random Forest.
+			Figura 7: Princípio de funcionamento da Random Forest.
 		</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -115,7 +103,7 @@ include "head.php";
 			<p>
 				Como ocorre com qualquer técnica de classificação, antes de qualquer coisa precisamos de uma base de dados
 				de treinamento <i>D</i>, composta por <i>d</i> objetos. O treinamento das <i>k</i> árvores de decisão 
-				(lado esquerdo da Figura 10) que compõem a <span class="small-caps">RF</span> é feito em <i>k</i> iterações.
+				(lado esquerdo da Figura 7) que compõem a <span class="small-caps">RF</span> é feito em <i>k</i> iterações.
 				Para cada iteração (<i>i=1, 2, ..., k</i>), um conjunto de treinamento <i>D<sub>i</sub></i>, com d objetos é gerado a partir de
 				um processo de amostragem com reposição. Sendo assim, cada D<sub>i</sub> tem o mesmo número de objetos do que 
 				a base de treinamento original <i>D</i>, porém alguns objetos podem aparecer mais de uma vez, enquanto outros
@@ -130,7 +118,7 @@ include "head.php";
 			</p>
 			<p>
 				O modelo final será então composto por diversas árvores, que possuirão estruturas diferentes em termos de
-				quantidade e disposição dos nós (Figura 11), uma vez que cada uma foi treinada a partir de um subconjunto
+				quantidade e disposição dos nós (Figura 8), uma vez que cada uma foi treinada a partir de um subconjunto
 				diferente de observações e atributos, sempre determinados de forma independente e aleatória. Daí, o nome 
 				Floresta Aleatória.
 			</p>
@@ -142,21 +130,9 @@ include "head.php";
 			class="col-xs-22 col-xs-offset-1 col-sm-14 col-sm-offset-3 col-md-11 col-md-offset-5 col-lg-8 col-lg-offset-7 gutter-sm-right"
 		>
 			<picture>
-			<source
-				srcset="dist/img/unidade-03/image11.png"
-				media="(min-width:1200px)"
-			/>
-			<source
-				srcset="dist/img/unidade-03/image9.png"
-				media="(min-width:600px)"
-			/>
-			<source
-				srcset="dist/img/unidade-03/image9.png"
-				media="(min-width:1px)"
-			/>
 			<img
 				class="image"
-				src="dist/img/unidade-03/image9.png"
+				src="dist/img/un03/figura08.svg"
 				alt="Um classificador Random Forest ."
 			/>
 			</picture>
@@ -165,7 +141,7 @@ include "head.php";
 			class="col-xs-22 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-lg-2 img-container__caption"
 		>
 			<div class="img-container__top-line"></div>
-			Figura 11: Um classificador Random Forest é composto por um grupo de k árvores de decisão com estrutura distinta.
+			Figura 8: Um classificador Random Forest é composto por um grupo de k árvores de decisão com estrutura distinta.
 		</figcaption>
 		</figure>
 		<!-- Imagem média [fim] -->
@@ -174,7 +150,7 @@ include "head.php";
 			<h2>Etapa de Classificação</h2>
 				<p>
 					Uma vez que a <span class="small-caps">RF</span> tenha sido gerada, o processo para classificar um novo objeto
-					(lado direito da Figura 10) é muito simples. Durante a classificação, cada árvore vota 
+					(lado direito da Figura 7) é muito simples. Durante a classificação, cada árvore vota 
 					(ou seja, determina individualmente a classe do objeto) e a classe mais votada é retornada.
 				</p>
 		</section>

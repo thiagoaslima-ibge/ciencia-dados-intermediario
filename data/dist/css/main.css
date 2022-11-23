@@ -4262,6 +4262,8 @@ html, body {
   overflow: hidden;
   color: #3d3d3d;
   font-family: "Roboto", sans-serif;
+  -ms-font-feature-settings: "onum" 1;
+    font-feature-settings: "onum" 1;
 }
 
 html {
@@ -5379,6 +5381,7 @@ input:checked + .slider:before {
   line-height: 1.588;
   border-collapse: collapse;
   table-layout: fixed;
+
 }
 .table tr:hover th,
 .table tr:hover td {
