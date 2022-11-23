@@ -26,7 +26,7 @@
 		
 		<script src="dist/js/scorm.min.js"></script>
 		<script src="dist/js/menu.js"></script>
-		<script src="dist/js/nav.min.js"></script>
+		<script src="src/js/nav.js"></script>
 	</head>
 
 	<body class="cover--example" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
@@ -75,7 +75,8 @@
 				</ul>
 			</div>
 			<div class="col-xs-22 col-sm-8 col-md-10 col-lg-10 cover-footer__cta">
-				<a href="pagina__guia-de-estudos.php" title="Selecione para começar">Começar!</a>
+				<!-- <a href="pagina__guia-de-estudos.php" title="Selecione para começar">Começar!</a> -->
+				<a href="03-02-classificadores-nao-descansam.php" title="Selecione para começar">Começar!</a>
 			</div>
 		</footer>
 

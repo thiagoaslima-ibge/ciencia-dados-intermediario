@@ -51,6 +51,7 @@ function menu() {
 
 function iniciaNavegacao() {
 	SCOInitialize(true);	
+	debugger;
 	var lesson_location = SCOGetValue("cmi.core.lesson_location");
 	if (lesson_location != undefined && lesson_location != '') {
 		ultimaPaginaLiberada = parseInt(lesson_location);
