@@ -29,8 +29,8 @@
 		<script src="src/js/nav.js"></script>
 	</head>
 
-	<body class="cover--example" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
-	<!-- <body class="cover--example" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
+	<body class="cover--example" style="background-image: url('dist/img/un03/cover--lg.jpg')" onload="iniciaNavegacao()" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;">
+	<!-- <body class="cover--example" style="background-image: url('dist/img/un03/cover--lg.jpg')" onunload="encerraNavegacao()" onbeforeunload="encerraNavegacao()" style="padding:0;"> -->
 		<!--[if lt IE 7]>
 			<p class="obsoletebrowser">Você está usando um navegador de internet obsoleto. Por favor atualize para uma melhor experiência.</p>
 		<![endif]-->
